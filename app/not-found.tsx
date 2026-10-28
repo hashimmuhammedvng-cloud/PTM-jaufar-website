@@ -29,7 +29,7 @@ export default function NotFound() {
             <span>Return to Homepage</span>
           </Link>
           <Link
-            href="/programs"
+            href="/#expertise"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-button text-xs font-semibold uppercase tracking-wider border border-white/20 text-white hover:bg-white/5 transition-all"
           >
             <span>Explore Programs</span>

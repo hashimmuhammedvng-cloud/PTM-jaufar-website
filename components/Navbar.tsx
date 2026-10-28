@@ -55,13 +55,13 @@ export default function Navbar() {
               aria-label="PTM Jaufar Swadiq Home"
             >
               {/* Logo Emblem from Folder */}
-              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 group-hover:border-gold transition-all duration-300 shadow-md shrink-0">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 group-hover:border-gold transition-all duration-300 shadow-md shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/logo.jpg"
                   alt="PTM Jaufar Swadiq Logo"
-                  fill
-                  sizes="44px"
-                  className="object-contain"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-contain"
                   priority
                 />
               </div>
@@ -145,13 +145,13 @@ export default function Navbar() {
         >
           <div className="flex flex-col space-y-3">
             <div className="flex items-center gap-3 pb-4 mb-2 border-b border-white/10">
-              <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 shrink-0">
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/logo.jpg"
                   alt="PTM Jaufar Swadiq Logo"
-                  fill
-                  sizes="40px"
-                  className="object-contain"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>

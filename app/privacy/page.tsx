@@ -85,7 +85,7 @@ export default function PrivacyPage() {
             <Link href="/" className="text-gold hover:underline">
               ← Return to Homepage
             </Link>
-            <Link href="/contact" className="text-gold hover:underline">
+            <Link href="/#contact" className="text-gold hover:underline">
               Contact Executive Office →
             </Link>
           </div>

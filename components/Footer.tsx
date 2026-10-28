@@ -14,13 +14,13 @@ export default function Footer() {
           {/* Brand & Philosophy */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 shadow-sm shrink-0">
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 shadow-sm shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/logo.jpg"
                   alt="PTM Jaufar Swadiq Logo"
-                  fill
-                  sizes="40px"
-                  className="object-contain"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
