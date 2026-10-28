@@ -154,6 +154,7 @@ export const siteConfig = {
 
   images: {
     hero: "/images/hero-portrait.jpg",
+    stageHero: "/images/jaufar-stage-hero.png",
     about: "/images/about-portrait.jpg",
     action1: "/images/speaking-session-1.jpg",
     action2: "/images/workshop-session-1.jpg",

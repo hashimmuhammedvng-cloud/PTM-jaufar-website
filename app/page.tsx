@@ -22,103 +22,104 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col w-full overflow-hidden bg-navy text-slate-200">
+    <div className="flex flex-col w-full overflow-hidden bg-navy text-slate-200 font-body">
       {/* =========================================================================
-          HERO SECTION
+          HERO SECTION — CINEMATIC FULL-STAGE IMMERSION (Syam K Mohan Style)
           ========================================================================= */}
-      <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
-        {/* Sleek Minimalist Background Glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
+      <section className="relative min-h-[92vh] sm:min-h-screen flex items-center pt-28 pb-20 lg:pt-32 lg:pb-24 overflow-hidden bg-navy">
+        {/* Stage Photo Background (Jaufar Speaking on Stage behind Podium) */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] xl:w-[60%] h-full z-0 pointer-events-none">
+          <Image
+            src={siteConfig.images.stageHero}
+            alt="PTM Jaufar Swadiq on stage speaking at the podium"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 65vw"
+            className="object-cover object-right sm:object-center"
+          />
 
+          {/* Gradients blending photo seamlessly into Midnight Navy background */}
+          {/* Left blend */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 via-35% to-transparent hidden lg:block" />
+          {/* Mobile full overlay */}
+          <div className="absolute inset-0 bg-navy/80 lg:hidden" />
+          {/* Bottom blend into numbers section */}
+          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 via-20% to-transparent" />
+          {/* Top blend under navbar */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/30 to-transparent" />
+          {/* Subtle warm stage aura */}
+          <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gold/10 rounded-full blur-[100px] pointer-events-none" />
+        </div>
+
+        {/* Hero Foreground Content */}
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Content (7 cols) */}
-            <div className="lg:col-span-7 flex flex-col items-start space-y-6">
-              {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-gold">
-                  {siteConfig.title}
-                </span>
-                <span className="text-white/20">•</span>
-                <span className="text-[11px] text-slate-300">
-                  {siteConfig.pillars}
-                </span>
-              </div>
-
-              {/* Main Headline */}
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
-                Unlock <span className="text-gold">Human Potential.</span>
-                <br />
-                Inspire Leadership.
-                <br />
-                <span className="text-slate-100 font-medium">Transform Lives.</span>
-              </h1>
-
-              {/* Exact Hero Paragraphs */}
-              <div className="space-y-3 text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl font-normal">
-                <p>{siteConfig.heroParagraphs[0]}</p>
-                <p className="text-sm sm:text-base text-slate-400">
-                  {siteConfig.heroParagraphs[1]}
-                </p>
-                <p className="text-sm sm:text-base text-slate-300 font-medium">
-                  {siteConfig.heroParagraphs[2]}
-                </p>
-              </div>
-
-              {/* Motto Badge */}
-              <div className="text-sm font-semibold text-gold border-l-2 border-gold pl-3 py-1">
-                “{siteConfig.secondaryTagline}”
-              </div>
-
-              {/* CTAs */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-                <Link
-                  href="#expertise"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider bg-gold text-navy hover:bg-gold-light active:scale-[0.98] transition-all shadow-md shadow-gold/20"
-                >
-                  <span>Explore My Programs</span>
-                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-                </Link>
-
-                <Link
-                  href="#contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-button text-xs font-semibold uppercase tracking-wider border border-white/20 text-white hover:bg-white/5 active:scale-[0.98] transition-all"
-                >
-                  <span>Invite Me to Speak or Train</span>
-                  <ArrowUpRight className="w-4 h-4 text-gold stroke-[2]" />
-                </Link>
-              </div>
+          <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl flex flex-col items-start space-y-6 sm:space-y-7">
+            {/* Eyebrow Label */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-dark/80 backdrop-blur-md border border-gold/30">
+              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
+                {siteConfig.title}
+              </span>
+              <span className="text-white/20">•</span>
+              <span className="text-[11px] text-slate-300 font-medium hidden sm:inline">
+                {siteConfig.pillars}
+              </span>
             </div>
 
-            {/* Right Portrait (5 cols) */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-sm sm:max-w-md">
-                <div className="relative rounded-2xl overflow-hidden border border-gold/30 bg-navy-light shadow-2xl aspect-[3/4]">
-                  <Image
-                    src={siteConfig.images.hero}
-                    alt="PTM Jaufar Swadiq — Human Excellence Strategist"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 420px"
-                    className="object-cover object-top hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80" />
+            {/* Impactful Headline (Cinematic Style) */}
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.14] uppercase">
+              Unlock <span className="text-gold">Human Potential.</span>
+              <br />
+              Inspire Leadership.
+              <br />
+              <span className="text-slate-100">Transform Lives.</span>
+            </h1>
 
-                  {/* Clean Minimalist Nameplate */}
-                  <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-navy-dark/90 backdrop-blur-md border border-white/10">
-                    <div className="font-heading font-semibold text-lg text-white">
-                      {siteConfig.name}
-                    </div>
-                    <div className="text-[11px] uppercase tracking-wider font-medium text-gold">
-                      {siteConfig.title}
-                    </div>
-                    <div className="text-xs text-slate-300 italic mt-1 pt-1 border-t border-white/10">
-                      “{siteConfig.corePhilosophy}”
-                    </div>
+            {/* Supporting Copy */}
+            <div className="space-y-3 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+              <p>{siteConfig.heroParagraphs[0]}</p>
+              <p className="text-sm sm:text-base text-slate-300/90">
+                {siteConfig.heroParagraphs[1]}
+              </p>
+            </div>
+
+            {/* Motto Quote */}
+            <div className="text-xs sm:text-sm font-semibold text-gold border-l-2 border-gold pl-3 py-1">
+              “{siteConfig.secondaryTagline}”
+            </div>
+
+            {/* Syam K Mohan-Inspired Signature Circular CTA Button */}
+            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 w-full">
+              <Link
+                href="#contact"
+                className="group inline-flex items-center gap-4 text-left focus:outline-none"
+              >
+                {/* Circular Accent Badge with Arrow */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-navy-dark/90 border border-gold/40 flex items-center justify-center p-1.5 shadow-2xl group-hover:border-gold transition-all duration-300 shrink-0">
+                  <div className="w-full h-full rounded-full bg-gold flex items-center justify-center text-navy group-hover:bg-gold-light group-hover:scale-105 transition-all shadow-md">
+                    <ArrowUpRight className="w-6 h-6 stroke-[2.5]" />
                   </div>
                 </div>
-              </div>
+
+                {/* Button Typography */}
+                <div className="flex flex-col">
+                  <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-gold transition-colors">
+                    Invite Jaufar for Your Event
+                  </span>
+                  <span className="text-xs text-gold/90 font-medium">
+                    Keynote Speaking & Leadership Training →
+                  </span>
+                </div>
+              </Link>
+
+              {/* Secondary Clean Action */}
+              <Link
+                href="#expertise"
+                className="sm:ml-4 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-button text-xs font-semibold uppercase tracking-wider border border-white/20 text-slate-300 hover:text-white hover:bg-white/5 active:scale-[0.98] transition-all"
+              >
+                <span>Explore Programs</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         </div>
@@ -138,7 +139,7 @@ export default function HomePage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
               1. THE CORE CONVICTION
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight uppercase">
               {siteConfig.powerfulHook.headline}
             </h2>
             <p className="text-base sm:text-xl text-slate-300 leading-relaxed font-normal pt-2">
@@ -281,7 +282,7 @@ export default function HomePage() {
               </div>
             ))}
 
-            {/* Clean Custom Cohort Card */}
+            {/* Custom Cohort Card */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-navy-light to-navy-dark border border-gold/30 flex flex-col justify-between">
               <div>
                 <div className="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold mb-4">
