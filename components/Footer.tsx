@@ -116,7 +116,7 @@ export default function Footer() {
             <div className="pt-2">
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-button text-xs font-semibold uppercase tracking-wider bg-gold text-navy hover:bg-gold-light transition-all"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-button text-xs font-semibold uppercase tracking-wider btn-gold-gradient"
               >
                 <span>Invite to Speak or Train</span>
                 <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />

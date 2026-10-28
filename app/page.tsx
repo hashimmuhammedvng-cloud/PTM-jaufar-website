@@ -85,7 +85,7 @@ export default function HomePage() {
               >
                 {/* Circular Accent Badge with Arrow */}
                 <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-navy-dark/90 border border-gold/40 flex items-center justify-center p-1 shadow-xl group-hover:border-gold transition-all duration-300 shrink-0">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gold flex items-center justify-center text-navy group-hover:bg-gold-light group-hover:scale-105 transition-all shadow-md">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full btn-gold-gradient flex items-center justify-center text-navy group-hover:scale-105 transition-all shadow-md">
                     <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                   </div>
                 </div>

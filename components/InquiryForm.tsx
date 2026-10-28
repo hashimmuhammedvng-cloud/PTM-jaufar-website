@@ -239,7 +239,7 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider bg-gold text-navy hover:bg-gold-light active:scale-[0.98] transition-all disabled:opacity-60 shadow-md shadow-gold/20"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient disabled:opacity-60"
             >
               {status === "loading" ? (
                 <>
