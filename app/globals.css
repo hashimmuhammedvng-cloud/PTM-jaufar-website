@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #101C2C;
+  --color-navy-dark: #0A121D;
+  --color-navy-light: #18273D;
+  --color-gold: #C5A15A;
+  --color-gold-light: #DFBA73;
+  --color-gold-dark: #9E7E3C;
+  --color-ivory: #F7F4ED;
+  --color-white: #FFFFFF;
+  --color-charcoal: #25292E;
+  --color-muted: #737780;
+
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-card: 12px;
+  --radius-button: 6px;
+  --container-width: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-navy);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+/* Typography Helpers */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Eyebrow Label */
+.eyebrow-label {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow-line {
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-gold);
+}
+
+/* Gold Gradient Accents */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #C5A15A 50%, #9E7E3C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #C5A15A 50%, #9E7E3C 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(197, 161, 90, 0.25);
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Card hover and luxury elevation */
+.card-navy {
+  background-color: rgba(20, 35, 55, 0.7);
+  border: 1px solid rgba(197, 161, 90, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-card);
+  transition: all 0.3s ease;
+}
+
+.card-navy:hover {
+  border-color: rgba(197, 161, 90, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.card-ivory {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(37, 41, 46, 0.08);
+  border-radius: var(--radius-card);
+  transition: all 0.3s ease;
+}
+
+.card-ivory:hover {
+  border-color: rgba(197, 161, 90, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(16, 28, 44, 0.08);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
