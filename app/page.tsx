@@ -59,22 +59,26 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Impactful Headline */}
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase">
-              Unlock <span className="text-gold">Human Potential.</span>
-              <br />
-              Inspire Leadership.
-              <br />
-              <span className="text-slate-100">Transform Lives.</span>
+            {/* Impactful Headline with Cinematic Staggered Entrance & Gold Shimmer */}
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase flex flex-col items-start">
+              <span className="animate-hero-line-1 inline-block">
+                Unlock <span className="gold-shimmer-text">Human Potential.</span>
+              </span>
+              <span className="animate-hero-line-2 inline-block">
+                Inspire Leadership.
+              </span>
+              <span className="animate-hero-line-3 inline-block text-slate-100">
+                Transform Lives.
+              </span>
             </h1>
 
             {/* Lean Single Supporting Sentence */}
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            <p className="animate-hero-desc text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {siteConfig.heroParagraphs[0]}
             </p>
 
             {/* Circular CTA Button + Explore Link */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 w-full">
+            <div className="animate-hero-cta pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 w-full">
               <Link
                 href="#contact"
                 className="group inline-flex items-center gap-3.5 text-left focus:outline-none"
