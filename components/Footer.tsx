@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/siteData";
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 
@@ -12,19 +13,27 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Brand & Philosophy */}
           <div className="lg:col-span-5 space-y-4">
-            <div>
-              <span className="font-heading font-semibold text-2xl text-white tracking-tight">
-                {siteConfig.name}
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-wider text-gold block mt-1">
-                {siteConfig.title}
-              </span>
-              <span className="text-xs text-muted block mt-0.5">
-                {siteConfig.pillars}
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white p-0.5 border border-gold/40 shadow-sm shrink-0">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="PTM Jaufar Swadiq Logo"
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <span className="font-heading font-bold text-xl text-white tracking-tight block">
+                  {siteConfig.name}
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-gold block">
+                  {siteConfig.title}
+                </span>
+              </div>
             </div>
 
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm pt-1">
               Empowering individuals, leaders, and organizations to achieve excellence
               through leadership development, emotional intelligence, and transformative training.
             </p>
