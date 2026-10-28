@@ -45,8 +45,8 @@ function SingleCounter({ item, inView }: CounterProps) {
   const formattedNumber = displayValue.toLocaleString();
 
   return (
-    <div className="flex flex-col items-center sm:items-start text-center sm:text-left py-4 sm:py-2 px-3">
-      {/* Animated Counter */}
+    <div className="flex flex-col items-start py-2">
+      {/* Plain Animated Counter */}
       <div className="flex items-baseline gap-1">
         <span className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
           {formattedNumber}
@@ -57,7 +57,7 @@ function SingleCounter({ item, inView }: CounterProps) {
       </div>
 
       {/* Label */}
-      <div className="font-heading font-medium text-sm sm:text-base text-slate-200 mt-2">
+      <div className="font-heading font-semibold text-sm sm:text-base text-slate-100 mt-2">
         {item.label}
       </div>
 
@@ -94,14 +94,13 @@ export default function ImpactCounters() {
   return (
     <div
       ref={containerRef}
-      className="relative z-20 max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10"
+      className="relative z-20 max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 border-b border-white/5"
     >
-      <div className="rounded-2xl bg-navy-light/60 backdrop-blur-xl border border-gold/20 p-6 sm:p-8 lg:p-10 shadow-2xl shadow-black/40">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-          {minimalistMetrics.map((metric) => (
-            <SingleCounter key={metric.id} item={metric} inView={inView} />
-          ))}
-        </div>
+      {/* Completely Plain Numbers — No Box, No Container Card */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        {minimalistMetrics.map((metric) => (
+          <SingleCounter key={metric.id} item={metric} inView={inView} />
+        ))}
       </div>
     </div>
   );

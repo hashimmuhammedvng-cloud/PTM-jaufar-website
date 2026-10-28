@@ -24,50 +24,43 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-hidden bg-navy text-slate-200 font-body">
       {/* =========================================================================
-          HERO SECTION — CINEMATIC FULL-STAGE IMMERSION (Syam K Mohan Style)
+          HERO SECTION — BRIGHT VISIBLE STAGE PHOTO & MINIMALIST LEAN CONTENT
           ========================================================================= */}
-      <section className="relative min-h-[92vh] sm:min-h-screen flex items-center pt-28 pb-20 lg:pt-32 lg:pb-24 overflow-hidden bg-navy">
-        {/* Stage Photo Background (Jaufar Speaking on Stage behind Podium) */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] xl:w-[60%] h-full z-0 pointer-events-none">
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-navy">
+        {/* Stage Photo on the Right — Crisp, Bright & Fully Visible */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[55%] h-full z-0 pointer-events-none">
           <Image
             src={siteConfig.images.stageHero}
             alt="PTM Jaufar Swadiq on stage speaking at the podium"
             fill
             priority
-            sizes="(max-width: 1024px) 100vw, 65vw"
-            className="object-cover object-right sm:object-center"
+            sizes="(max-width: 1024px) 100vw, 55vw"
+            className="object-cover object-[78%_center] lg:object-right brightness-105 contrast-[1.02]"
           />
 
-          {/* Gradients blending photo seamlessly into Midnight Navy background */}
-          {/* Left blend */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 via-35% to-transparent hidden lg:block" />
-          {/* Mobile full overlay */}
-          <div className="absolute inset-0 bg-navy/80 lg:hidden" />
-          {/* Bottom blend into numbers section */}
-          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 via-20% to-transparent" />
-          {/* Top blend under navbar */}
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/30 to-transparent" />
-          {/* Subtle warm stage aura */}
-          <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gold/10 rounded-full blur-[100px] pointer-events-none" />
+          {/* Seamless Soft Left Feather Only — Does NOT Darken the Man */}
+          <div className="absolute inset-y-0 left-0 w-1/3 lg:w-1/2 bg-gradient-to-r from-navy via-navy/60 to-transparent hidden sm:block" />
+
+          {/* Light Mobile Contrast Mask */}
+          <div className="absolute inset-0 bg-navy/65 sm:hidden" />
+
+          {/* Subtle Bottom Transition */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy to-transparent" />
         </div>
 
-        {/* Hero Foreground Content */}
+        {/* Hero Foreground Content — Lean, Focused & Clean */}
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl flex flex-col items-start space-y-6 sm:space-y-7">
+          <div className="max-w-xl lg:max-w-lg xl:max-w-xl flex flex-col items-start space-y-6">
             {/* Eyebrow Label */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-dark/80 backdrop-blur-md border border-gold/30">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-dark/90 border border-gold/30 backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
               <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
                 {siteConfig.title}
               </span>
-              <span className="text-white/20">•</span>
-              <span className="text-[11px] text-slate-300 font-medium hidden sm:inline">
-                {siteConfig.pillars}
-              </span>
             </div>
 
-            {/* Impactful Headline (Cinematic Style) */}
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.14] uppercase">
+            {/* Impactful Headline */}
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase">
               Unlock <span className="text-gold">Human Potential.</span>
               <br />
               Inspire Leadership.
@@ -75,39 +68,31 @@ export default function HomePage() {
               <span className="text-slate-100">Transform Lives.</span>
             </h1>
 
-            {/* Supporting Copy */}
-            <div className="space-y-3 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              <p>{siteConfig.heroParagraphs[0]}</p>
-              <p className="text-sm sm:text-base text-slate-300/90">
-                {siteConfig.heroParagraphs[1]}
-              </p>
-            </div>
+            {/* Lean Single Supporting Sentence */}
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+              {siteConfig.heroParagraphs[0]}
+            </p>
 
-            {/* Motto Quote */}
-            <div className="text-xs sm:text-sm font-semibold text-gold border-l-2 border-gold pl-3 py-1">
-              “{siteConfig.secondaryTagline}”
-            </div>
-
-            {/* Syam K Mohan-Inspired Signature Circular CTA Button */}
-            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 w-full">
+            {/* Circular CTA Button + Explore Link */}
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 w-full">
               <Link
                 href="#contact"
-                className="group inline-flex items-center gap-4 text-left focus:outline-none"
+                className="group inline-flex items-center gap-3.5 text-left focus:outline-none"
               >
                 {/* Circular Accent Badge with Arrow */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-navy-dark/90 border border-gold/40 flex items-center justify-center p-1.5 shadow-2xl group-hover:border-gold transition-all duration-300 shrink-0">
-                  <div className="w-full h-full rounded-full bg-gold flex items-center justify-center text-navy group-hover:bg-gold-light group-hover:scale-105 transition-all shadow-md">
-                    <ArrowUpRight className="w-6 h-6 stroke-[2.5]" />
+                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-navy-dark/90 border border-gold/40 flex items-center justify-center p-1 shadow-xl group-hover:border-gold transition-all duration-300 shrink-0">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gold flex items-center justify-center text-navy group-hover:bg-gold-light group-hover:scale-105 transition-all shadow-md">
+                    <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                   </div>
                 </div>
 
-                {/* Button Typography */}
+                {/* Button Text */}
                 <div className="flex flex-col">
                   <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-gold transition-colors">
                     Invite Jaufar for Your Event
                   </span>
                   <span className="text-xs text-gold/90 font-medium">
-                    Keynote Speaking & Leadership Training →
+                    Keynote Speaking & Training →
                   </span>
                 </div>
               </Link>
@@ -115,7 +100,7 @@ export default function HomePage() {
               {/* Secondary Clean Action */}
               <Link
                 href="#expertise"
-                className="sm:ml-4 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-button text-xs font-semibold uppercase tracking-wider border border-white/20 text-slate-300 hover:text-white hover:bg-white/5 active:scale-[0.98] transition-all"
+                className="sm:ml-3 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-button text-xs font-semibold uppercase tracking-wider border border-white/20 text-slate-300 hover:text-white hover:bg-white/5 active:scale-[0.98] transition-all"
               >
                 <span>Explore Programs</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -126,7 +111,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          MINIMALIST ANIMATIC NUMBERS
+          MINIMALIST PLAIN NUMBERS (No Box)
           ========================================================================= */}
       <ImpactCounters />
 
