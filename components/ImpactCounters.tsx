@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { impactMetrics, MetricItem } from "@/data/siteData";
-import { CheckCircle2, Info } from "lucide-react";
+import { minimalistMetrics, MetricItem } from "@/data/siteData";
 
 interface CounterProps {
   item: MetricItem;
@@ -15,21 +14,19 @@ function SingleCounter({ item, inView }: CounterProps) {
   useEffect(() => {
     if (!inView) return;
 
-    // Check prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) {
       setDisplayValue(item.value);
       return;
     }
 
-    const duration = 1800; // ms
+    const duration = 1600;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
     let frame = 0;
 
     const timer = setInterval(() => {
       frame++;
-      // Ease out cubic
       const progress = frame / totalFrames;
       const easeProgress = 1 - Math.pow(1 - progress, 3);
       const current = Math.round(easeProgress * item.value);
@@ -48,41 +45,26 @@ function SingleCounter({ item, inView }: CounterProps) {
   const formattedNumber = displayValue.toLocaleString();
 
   return (
-    <div className="relative group flex flex-col p-6 rounded-card bg-navy-light/40 border border-gold/15 hover:border-gold/40 transition-all duration-300">
-      {/* Verification status pill */}
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-[10px] uppercase font-bold tracking-widest text-gold/80">
-          Metric {item.verified ? "Verified" : "Indicative"}
+    <div className="flex flex-col items-center sm:items-start text-center sm:text-left py-4 sm:py-2 px-3">
+      {/* Animated Counter */}
+      <div className="flex items-baseline gap-1">
+        <span className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+          {formattedNumber}
         </span>
-        {item.verified ? (
-          <span title="Verified metric from official records">
-            <CheckCircle2 className="w-3.5 h-3.5 text-gold/70" />
-          </span>
-        ) : (
-          <span title="Estimated figure pending certification">
-            <Info className="w-3.5 h-3.5 text-muted" />
-          </span>
-        )}
-      </div>
-
-      {/* Counter value */}
-      <div className="font-heading text-4xl sm:text-5xl lg:text-6xl text-gold font-normal tracking-tight">
-        {formattedNumber}
-        <span className="text-gold-light ml-0.5">{item.suffix}</span>
+        <span className="text-gold font-heading font-extrabold text-3xl sm:text-4xl">
+          {item.suffix}
+        </span>
       </div>
 
       {/* Label */}
-      <h3 className="text-white font-medium text-base sm:text-lg mt-2 mb-1 tracking-tight">
+      <div className="font-heading font-medium text-sm sm:text-base text-slate-200 mt-2">
         {item.label}
-      </h3>
+      </div>
 
-      {/* Description */}
-      <p className="text-xs sm:text-sm text-slate-300/80 leading-relaxed mt-1">
-        {item.description}
-      </p>
-
-      {/* Fine gold bottom highlight */}
-      <div className="w-8 h-[2px] bg-gold/30 group-hover:w-16 group-hover:bg-gold transition-all duration-300 mt-4" />
+      {/* Sublabel */}
+      <div className="text-xs text-muted font-normal mt-0.5 tracking-wide">
+        {item.sublabel}
+      </div>
     </div>
   );
 }
@@ -99,7 +81,7 @@ export default function ImpactCounters() {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.2 }
     );
 
     if (containerRef.current) {
@@ -110,29 +92,17 @@ export default function ImpactCounters() {
   }, []);
 
   return (
-    <section
+    <div
       ref={containerRef}
-      className="relative z-20 -mt-10 sm:-mt-14 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
-      aria-label="Professional Impact Metrics"
+      className="relative z-20 max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10"
     >
-      <div className="bg-navy-dark/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 lg:p-10 border border-gold/20 shadow-2xl shadow-black/40">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {impactMetrics.map((metric) => (
+      <div className="rounded-2xl bg-navy-light/60 backdrop-blur-xl border border-gold/20 p-6 sm:p-8 lg:p-10 shadow-2xl shadow-black/40">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+          {minimalistMetrics.map((metric) => (
             <SingleCounter key={metric.id} item={metric} inView={inView} />
           ))}
         </div>
-
-        {/* Data Governance Disclaimer */}
-        <div className="mt-6 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2">
-          <span>
-            Data Integrity: Figures represent documented participants and engagements across professional programs.
-          </span>
-          <span className="text-gold/80 italic font-mono">
-            Audited & Maintained in Data Config
-          </span>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }
-

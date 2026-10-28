@@ -12,39 +12,37 @@ module.exports = {
         navy: {
           DEFAULT: "#101C2C",
           dark: "#0A121D",
-          light: "#18273D",
-          card: "#142337",
+          light: "#162438",
+          card: "#121E2F",
         },
         gold: {
           DEFAULT: "#C5A15A",
           light: "#DFBA73",
           dark: "#9E7E3C",
-          muted: "rgba(197, 161, 90, 0.15)",
+          muted: "rgba(197, 161, 90, 0.12)",
         },
         ivory: {
           DEFAULT: "#F7F4ED",
           warm: "#EFECE3",
-          card: "#FFFFFF",
         },
         charcoal: {
           DEFAULT: "#25292E",
           muted: "#4A4F57",
         },
-        muted: "#737780",
+        muted: "#8E95A2",
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Georgia", "serif"],
-        body: ["var(--font-body)", "system-ui", "-apple-system", "sans-serif"],
+        heading: ["var(--font-heading)", "Poppins", "-apple-system", "sans-serif"],
+        body: ["var(--font-body)", "Inter", "-apple-system", "sans-serif"],
       },
       maxWidth: {
-        container: "1200px",
+        container: "1160px",
       },
       borderRadius: {
-        card: "12px",
-        button: "6px",
+        card: "16px",
+        button: "8px",
       },
     },
   },
   plugins: [],
 };
-
