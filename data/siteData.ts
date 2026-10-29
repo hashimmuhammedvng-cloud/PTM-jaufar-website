@@ -107,7 +107,7 @@ export const siteConfig = {
           "Fostering psychological safety and collaboration",
           "Inspiring multi-generational positive change",
         ],
-        image: "/images/speaking-session-1.jpg",
+        image: "/images/creating-impact.jpg",
       },
     ],
   },
