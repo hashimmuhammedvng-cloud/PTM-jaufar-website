@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/siteData";
 import ImpactCounters from "@/components/ImpactCounters";
+import WhatYouDoSlider from "@/components/WhatYouDoSlider";
+import WhoYouHelpScrolling from "@/components/WhoYouHelpScrolling";
 import InquiryForm from "@/components/InquiryForm";
 import {
   ArrowRight,
@@ -11,8 +13,13 @@ import {
   Sparkles,
   ShieldCheck,
   HeartHandshake,
-  Users,
 } from "lucide-react";
+import {
+  InstagramIcon,
+  FacebookIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+} from "@/components/SocialIcons";
 
 export default function HomePage() {
   const pillarIcons = [
@@ -27,7 +34,7 @@ export default function HomePage() {
           HERO SECTION — BRIGHT VISIBLE STAGE PHOTO & MINIMALIST LEAN CONTENT
           ========================================================================= */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-navy">
-        {/* Stage Photo on the Right — Crisp, Bright & Fully Visible */}
+        {/* Stage Photo on the Right */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[55%] h-full z-0 pointer-events-none">
           <Image
             src={siteConfig.images.stageHero}
@@ -37,18 +44,15 @@ export default function HomePage() {
             sizes="(max-width: 1024px) 100vw, 55vw"
             className="object-cover object-[78%_center] lg:object-right brightness-105 contrast-[1.02]"
           />
-
-          {/* Seamless Soft Left Feather Only — Does NOT Darken the Man */}
+          {/* Soft Left Feather */}
           <div className="absolute inset-y-0 left-0 w-1/3 lg:w-1/2 bg-gradient-to-r from-navy via-navy/60 to-transparent hidden sm:block" />
-
           {/* Light Mobile Contrast Mask */}
           <div className="absolute inset-0 bg-navy/65 sm:hidden" />
-
-          {/* Subtle Bottom Transition */}
+          {/* Bottom Transition */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy to-transparent" />
         </div>
 
-        {/* Hero Foreground Content — Lean, Focused & Clean */}
+        {/* Hero Foreground Content */}
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-xl lg:max-w-lg xl:max-w-xl flex flex-col items-start space-y-6">
             {/* Eyebrow Label */}
@@ -59,7 +63,7 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Impactful Headline with Cinematic Staggered Entrance & Gold Shimmer */}
+            {/* Impactful Headline with Cinematic Reveal & Gold Shimmer */}
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase flex flex-col items-start">
               <span className="animate-hero-line-1 inline-block">
                 Unlock <span className="gold-shimmer-text">Human Potential.</span>
@@ -72,7 +76,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            {/* Lean Single Supporting Sentence */}
+            {/* Single Supporting Statement */}
             <p className="animate-hero-desc text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {siteConfig.heroParagraphs[0]}
             </p>
@@ -120,178 +124,70 @@ export default function HomePage() {
       <ImpactCounters />
 
       {/* =========================================================================
-          1. POWERFUL HOOK
+          ABOUT SECTION — DIRECTLY AFTER HERO (Waving Man with Microphone Image)
           ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-navy border-t border-white/5 relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto space-y-4">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-              1. THE CORE CONVICTION
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight uppercase">
-              {siteConfig.powerfulHook.headline}
-            </h2>
-            <p className="text-base sm:text-xl text-slate-300 leading-relaxed font-normal pt-2">
-              {siteConfig.powerfulHook.body}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          2. YOUR PHILOSOPHY
-          ========================================================================= */}
-      <section id="philosophy" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
+      <section id="about" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Left Philosophy Text (7 cols) */}
-            <div className="lg:col-span-7 space-y-5">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-                2. YOUR PHILOSOPHY
-              </span>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-                “{siteConfig.philosophy.title}”
-              </h2>
-              <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-                <p>{siteConfig.philosophy.paragraphs[0]}</p>
-                <p className="text-slate-200 font-medium">
-                  {siteConfig.philosophy.paragraphs[1]}
-                </p>
-              </div>
-            </div>
-
-            {/* Right Supporting Photo (5 cols) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Photo: Waving Man With Microphone (5 cols) */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-gold/20 shadow-xl aspect-[4/5] bg-navy-light">
+              <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-gold/30 shadow-2xl aspect-[4/5] bg-navy-light group">
                 <Image
-                  src={siteConfig.images.about}
-                  alt="PTM Jaufar Swadiq in session"
+                  src={siteConfig.images.wavingMic}
+                  alt="PTM Jaufar Swadiq on stage with microphone"
                   fill
-                  sizes="(max-width: 768px) 100vw, 380px"
-                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          3. WHO YOU ARE
-          ========================================================================= */}
-      <section id="about" className="py-20 sm:py-28 bg-navy relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Photo (5 cols) */}
-            <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-              <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-white/10 shadow-xl aspect-[4/5] bg-navy-light">
-                <Image
-                  src={siteConfig.images.action1}
-                  alt="Meet PTM Jaufar Swadiq"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 380px"
-                  className="object-cover object-top"
-                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-navy-dark/90 backdrop-blur-md border border-white/10 text-xs">
+                  <div className="font-heading font-semibold text-white">
+                    PTM Jaufar Swadiq
+                  </div>
+                  <div className="text-[11px] text-gold uppercase tracking-wider">
+                    {siteConfig.title}
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Narrative (7 cols) */}
-            <div className="lg:col-span-7 order-1 lg:order-2 space-y-5">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-                3. WHO YOU ARE
-              </span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            {/* Right Narrative: Meet PTM Jaufar Swadiq (7 cols) */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+                  ABOUT PTM JAUFAR SWADIQ
+                </span>
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
                 {siteConfig.whoYouAre.title}
               </h2>
-              <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+
+              <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
                 <p>{siteConfig.whoYouAre.paragraphs[0]}</p>
                 <p>{siteConfig.whoYouAre.paragraphs[1]}</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* =========================================================================
-          4. WHAT YOU DO
-          ========================================================================= */}
-      <section id="what-i-do" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto space-y-5">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-              4. WHAT YOU DO
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-              {siteConfig.whatYouDo.title}
-            </h2>
-            <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed text-left sm:text-center">
-              <p>{siteConfig.whatYouDo.paragraphs[0]}</p>
-              <p className="text-gold font-medium">
-                {siteConfig.whatYouDo.paragraphs[1]}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          5. WHO YOU HELP
-          ========================================================================= */}
-      <section id="who-i-help" className="py-20 sm:py-28 bg-navy relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-              5. WHO YOU HELP
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              {siteConfig.whoYouHelp.title}
-            </h2>
-            <p className="text-sm text-slate-400">
-              Guiding people across varied stages of life, leadership, and responsibility.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {siteConfig.whoYouHelp.audiences.map((aud, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-2xl bg-navy-light/40 border border-white/10 hover:border-gold/40 transition-colors duration-200 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold font-mono text-xs font-bold mb-4">
-                    0{index + 1}
+              {/* Core Commitment Highlights */}
+              <div className="space-y-2.5 pt-2">
+                {siteConfig.whoYouAre.highlights.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-navy-light/60 border border-white/5 text-xs sm:text-sm text-slate-200"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+                    <span>{item}</span>
                   </div>
-                  <h3 className="font-heading text-lg font-semibold text-white mb-2">
-                    {aud.target}
-                  </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    {aud.description}
-                  </p>
-                </div>
+                ))}
               </div>
-            ))}
 
-            {/* Custom Cohort Card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-navy-light to-navy-dark border border-gold/30 flex flex-col justify-between">
-              <div>
-                <div className="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold mb-4">
-                  <Users className="w-4 h-4" />
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-white mb-2">
-                  Custom Cohorts
-                </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
-                  Tailored development modules designed specifically for your organization's
-                  unique strategic vision and goals.
-                </p>
-              </div>
-              <div className="pt-4">
+              <div className="pt-2">
                 <Link
                   href="#contact"
-                  className="text-xs font-semibold text-gold hover:text-gold-light inline-flex items-center gap-1"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient"
                 >
-                  <span>Inquire for Custom Engagement</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Connect with Jaufar</span>
+                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                 </Link>
               </div>
             </div>
@@ -300,44 +196,42 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          6. TRANSFORMATION
+          WHAT YOU DO — INTERACTIVE SLIDER WITH 3 IMAGES
+          (Developing People • Strengthening Leaders • Creating Impact)
           ========================================================================= */}
-      <section id="transformation" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
+      <section id="what-i-do" className="py-20 sm:py-28 bg-navy relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-              6. TRANSFORMATION
+              WHAT I DO
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-              {siteConfig.transformation.title}
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+              {siteConfig.whatYouDo.title}
             </h2>
-            <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed text-left sm:text-center">
-              <p>{siteConfig.transformation.paragraphs[0]}</p>
-              <p>{siteConfig.transformation.paragraphs[1]}</p>
-            </div>
-
-            {/* Closing Motto Highlight */}
-            <div className="mt-8 p-6 rounded-2xl bg-navy-light/60 border border-gold/30 text-white font-heading font-semibold text-lg sm:text-xl">
-              “{siteConfig.transformation.closingMotto}”
-            </div>
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+              {siteConfig.whatYouDo.description}
+            </p>
           </div>
+
+          {/* Interactive 3-Slide Showcase */}
+          <WhatYouDoSlider />
         </div>
       </section>
 
       {/* =========================================================================
-          7. TOPICS / EXPERTISE
+          TOPICS / EXPERTISE — 3 CORE PILLARS
           ========================================================================= */}
-      <section id="expertise" className="py-20 sm:py-28 bg-navy relative">
+      <section id="expertise" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-              7. TOPICS / EXPERTISE
+              AREAS OF EXPERTISE
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              Areas of Expertise
+              Core Training Disciplines
             </h2>
             <p className="text-sm text-slate-400">
-              Three interconnected pillars of leadership and human excellence.
+              Three interconnected pillars of leadership, emotional intelligence, and human development.
             </p>
           </div>
 
@@ -382,15 +276,60 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          8. CALL TO ACTION & INQUIRY FORM
+          WHO YOU HELP — ANIMATED HORIZONTAL SCROLLING TRACK
           ========================================================================= */}
-      <section id="contact" className="py-20 sm:py-28 bg-navy-dark border-t border-gold/15 relative">
+      <section id="who-i-help" className="py-20 sm:py-28 bg-navy relative">
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
+            WHO YOU HELP
+          </span>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            {siteConfig.whoYouHelp.title}
+          </h2>
+          <p className="text-sm text-slate-400 mt-2">
+            {siteConfig.whoYouHelp.subtitle}
+          </p>
+        </div>
+
+        {/* Infinite Scrolling Track */}
+        <WhoYouHelpScrolling />
+      </section>
+
+      {/* =========================================================================
+          TRANSFORMATION
+          ========================================================================= */}
+      <section id="transformation" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
+              TRANSFORMATION
+            </span>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+              {siteConfig.transformation.title}
+            </h2>
+            <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed text-left sm:text-center">
+              <p>{siteConfig.transformation.paragraphs[0]}</p>
+              <p>{siteConfig.transformation.paragraphs[1]}</p>
+            </div>
+
+            {/* Closing Motto Highlight */}
+            <div className="mt-8 p-6 rounded-2xl bg-navy-light/60 border border-gold/30 text-white font-heading font-semibold text-lg sm:text-xl">
+              “{siteConfig.transformation.closingMotto}”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          CALL TO ACTION, SOCIAL CHANNELS & INQUIRY FORM
+          ========================================================================= */}
+      <section id="contact" className="py-20 sm:py-28 bg-navy border-t border-gold/15 relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left Info (5 cols) */}
+            {/* Left Info & Social Channels (5 cols) */}
             <div className="lg:col-span-5 space-y-6">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-                8. CALL TO ACTION
+                CALL TO ACTION
               </span>
 
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
@@ -409,8 +348,53 @@ export default function HomePage() {
                 {siteConfig.callToAction.invitation}
               </p>
 
+              {/* Social Channels Row (Instagram, Facebook, LinkedIn, YouTube) */}
+              <div className="pt-2 border-t border-white/10">
+                <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold block mb-3">
+                  Connect on Social Media:
+                </span>
+                <div className="flex items-center gap-3">
+                  <a
+                    href={siteConfig.socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-200 hover:text-navy hover:bg-gold hover:border-gold transition-all shadow-sm"
+                    aria-label="Instagram"
+                  >
+                    <InstagramIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={siteConfig.socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-200 hover:text-navy hover:bg-gold hover:border-gold transition-all shadow-sm"
+                    aria-label="Facebook"
+                  >
+                    <FacebookIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={siteConfig.socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-200 hover:text-navy hover:bg-gold hover:border-gold transition-all shadow-sm"
+                    aria-label="LinkedIn"
+                  >
+                    <LinkedinIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={siteConfig.socialLinks.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-200 hover:text-navy hover:bg-gold hover:border-gold transition-all shadow-sm"
+                    aria-label="YouTube"
+                  >
+                    <YoutubeIcon className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
               <div className="pt-2 text-xs text-slate-400">
-                Direct inquiry:{" "}
+                Direct executive inquiry:{" "}
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="text-gold underline hover:text-gold-light"

@@ -8,12 +8,11 @@ import { siteConfig } from "@/data/siteData";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Philosophy", href: "/#philosophy" },
   { label: "About", href: "/#about" },
   { label: "What I Do", href: "/#what-i-do" },
+  { label: "Expertise", href: "/#expertise" },
   { label: "Who I Help", href: "/#who-i-help" },
   { label: "Transformation", href: "/#transformation" },
-  { label: "Expertise", href: "/#expertise" },
   { label: "Contact", href: "/#contact" },
 ];
 

@@ -13,8 +13,19 @@ export interface ExpertiseItem {
 }
 
 export interface AudienceItem {
+  number: string;
   target: string;
   description: string;
+  badge: string;
+}
+
+export interface WhatYouDoSlide {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  points: string[];
+  image: string;
 }
 
 export const siteConfig = {
@@ -38,56 +49,102 @@ export const siteConfig = {
     body: "Great leadership begins with self-awareness, grows through emotional intelligence, and creates a lasting impact through purposeful action. The journey to excellence starts within.",
   },
 
-  // 2. Your Philosophy
-  philosophy: {
-    title: "Excellence Begins Within.",
-    paragraphs: [
-      "I believe that every individual has the potential to grow, lead, and create meaningful change. True excellence is not merely about achieving success; it is about developing character, mastering emotions, building meaningful relationships, and inspiring others to become their best selves.",
-      "When people understand themselves, lead with empathy, and act with purpose, they can transform not only their own lives but also the people and communities around them.",
-    ],
-  },
-
-  // 3. Who You Are
+  // 3. Who You Are (About Page Section)
   whoYouAre: {
     title: "Meet PTM Jaufar Swadiq",
     paragraphs: [
       "I am PTM Jaufar Swadiq, a Human Excellence Strategist passionate about developing leadership potential, strengthening emotional intelligence, and empowering individuals to achieve personal and professional excellence.",
       "My approach combines practical learning, human-centered development, and purposeful training to help people discover their strengths, overcome limitations, and lead with confidence, clarity, and compassion.",
     ],
-  },
-
-  // 4. What You Do
-  whatYouDo: {
-    title: "Developing People. Strengthening Leaders. Creating Impact.",
-    paragraphs: [
-      "Through leadership development, emotional intelligence programs, and transformative training, I help individuals and organizations build the mindset, skills, and behaviours needed for sustainable growth.",
-      "My work focuses on turning awareness into action, potential into performance, and leadership into a meaningful influence.",
+    highlights: [
+      "Leadership Development & Executive Mentoring",
+      "Emotional Intelligence & Interpersonal Mastery",
+      "Transformational Campus & Corporate Workshops",
     ],
   },
 
-  // 5. Who You Help
+  // 4. What You Do (Interactive Slide Section)
+  whatYouDo: {
+    title: "Developing People. Strengthening Leaders. Creating Impact.",
+    description:
+      "Through leadership development, emotional intelligence programs, and transformative training, I help individuals and organizations build the mindset, skills, and behaviours needed for sustainable growth. My work focuses on turning awareness into action, potential into performance, and leadership into a meaningful influence.",
+    slides: [
+      {
+        id: "developing-people",
+        title: "Developing People",
+        subtitle: "Human Potential & Emotional Intelligence",
+        description:
+          "Nurturing self-awareness, emotional resilience, and breakthrough mindsets to help individuals overcome limiting beliefs and reach their fullest personal capability.",
+        points: [
+          "Cultivating deep emotional self-regulation",
+          "Dismantling imposter syndrome and self-doubt",
+          "Building unshakeable personal confidence",
+        ],
+        image: "/images/session-youth.jpg",
+      },
+      {
+        id: "strengthening-leaders",
+        title: "Strengthening Leaders",
+        subtitle: "Values-Based & Servant Leadership",
+        description:
+          "Transforming managers into visionary leaders who inspire high-trust cultures, navigate high-stakes ambiguity, and lead with empathy and moral clarity.",
+        points: [
+          "Strategic decision-making under stress",
+          "Leading high-performance, cohesive teams",
+          "High-trust communication and authentic influence",
+        ],
+        image: "/images/training-session-1.jpg",
+      },
+      {
+        id: "creating-impact",
+        title: "Creating Impact",
+        subtitle: "Sustainable Organizational Transformation",
+        description:
+          "Moving beyond fleeting motivation to embed lasting behavioural elevation across teams, educational institutions, and entire communities.",
+        points: [
+          "Translating classroom realizations into daily habits",
+          "Fostering psychological safety and collaboration",
+          "Inspiring multi-generational positive change",
+        ],
+        image: "/images/speaking-session-1.jpg",
+      },
+    ],
+  },
+
+  // 5. Who You Help (Animated Scrolling Track)
   whoYouHelp: {
     title: "Empowering People Who Aspire to Grow",
+    subtitle: "Tailored human excellence interventions across every stage of growth.",
     audiences: [
       {
+        number: "01",
         target: "Leaders and aspiring leaders",
-        description: "Seeking to enhance their leadership effectiveness.",
+        description: "Seeking to enhance their leadership effectiveness and lead with empathy.",
+        badge: "Leadership",
       },
       {
+        number: "02",
         target: "Students and young professionals",
-        description: "Preparing to lead with confidence and purpose.",
+        description: "Preparing to lead with confidence, ethical vision, and life purpose.",
+        badge: "Next-Gen",
       },
       {
+        number: "03",
         target: "Educators and trainers",
-        description: "Who want to inspire, influence, and empower others.",
+        description: "Who want to inspire, influence, and empower others through room mastery.",
+        badge: "Facilitators",
       },
       {
+        number: "04",
         target: "Teams and organizations",
-        description: "Aiming to strengthen collaboration, communication, and performance.",
+        description: "Aiming to strengthen collaboration, interpersonal trust, and peak performance.",
+        badge: "Enterprises",
       },
       {
+        number: "05",
         target: "Individuals",
         description: "Committed to personal growth, emotional maturity, and human excellence.",
+        badge: "Growth Seekers",
       },
     ],
   },
@@ -152,9 +209,17 @@ export const siteConfig = {
     location: "Kerala, India & International",
   },
 
+  socialLinks: {
+    instagram: "https://instagram.com",
+    facebook: "https://facebook.com",
+    linkedin: "https://linkedin.com",
+    youtube: "https://youtube.com",
+  },
+
   images: {
     hero: "/images/hero-portrait.jpg",
     stageHero: "/images/jaufar-stage-hero.png",
+    wavingMic: "/images/jaufar-stage-hero.png",
     about: "/images/about-portrait.jpg",
     action1: "/images/speaking-session-1.jpg",
     action2: "/images/workshop-session-1.jpg",

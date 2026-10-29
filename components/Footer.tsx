@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/data/siteData";
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { InstagramIcon, FacebookIcon, LinkedinIcon, YoutubeIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -42,6 +43,51 @@ export default function Footer() {
               <span className="text-xs text-gold italic font-medium">
                 “{siteConfig.corePhilosophy}”
               </span>
+            </div>
+
+            {/* Social Media Channels (Instagram, Facebook, LinkedIn, YouTube) */}
+            <div className="pt-2">
+              <span className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block mb-2.5">
+                Official Channels
+              </span>
+              <div className="flex items-center gap-2.5">
+                <a
+                  href={siteConfig.socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-300 hover:text-gold hover:border-gold transition-colors"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={siteConfig.socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-300 hover:text-gold hover:border-gold transition-colors"
+                  aria-label="Facebook"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={siteConfig.socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-300 hover:text-gold hover:border-gold transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedinIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={siteConfig.socialLinks.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-navy-light border border-white/15 flex items-center justify-center text-slate-300 hover:text-gold hover:border-gold transition-colors"
+                  aria-label="YouTube"
+                >
+                  <YoutubeIcon className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
 
