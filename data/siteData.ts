@@ -94,7 +94,7 @@ export const siteConfig = {
           "Leading high-performance, cohesive teams",
           "High-trust communication and authentic influence",
         ],
-        image: "/images/training-session-1.jpg",
+        image: "/images/strengthening-leaders.png",
       },
       {
         id: "creating-impact",
