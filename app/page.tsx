@@ -180,20 +180,14 @@ export default function HomePage() {
 
       {/* =========================================================================
           WHAT YOU DO — INTERACTIVE SLIDER WITH 3 IMAGES
-          (Developing People • Strengthening Leaders • Creating Impact)
           ========================================================================= */}
       <section id="what-i-do" className="py-20 sm:py-28 bg-navy relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
               WHAT I DO
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-              {siteConfig.whatYouDo.title}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-              {siteConfig.whatYouDo.description}
-            </p>
+            <div className="w-12 h-[2px] bg-gold mx-auto rounded-full" />
           </div>
 
           {/* Interactive 3-Slide Showcase */}
