@@ -81,7 +81,7 @@ export const siteConfig = {
           "Dismantling imposter syndrome and self-doubt",
           "Building unshakeable personal confidence",
         ],
-        image: "/images/session-youth.jpg",
+        image: "/images/teamwork-fistbump.png",
       },
       {
         id: "strengthening-leaders",
