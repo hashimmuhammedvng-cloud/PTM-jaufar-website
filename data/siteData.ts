@@ -216,10 +216,44 @@ export const siteConfig = {
     youtube: "https://youtube.com",
   },
 
+  // Foundation Pillars (About Page)
+  foundation: [
+    {
+      id: "vision",
+      title: "Vision",
+      description:
+        "Empowering individuals and organizations by unlocking human excellence, emotional agility, and transformative leadership.",
+      icon: "Eye",
+    },
+    {
+      id: "mission",
+      title: "Mission",
+      description:
+        "Catalyzing sustainable personal and professional growth through practical learning, high-trust cultures, and values-based action.",
+      icon: "Target",
+    },
+    {
+      id: "purpose",
+      title: "Purpose",
+      description:
+        "Cultivating emotional maturity, deep empathy, and authentic influence to inspire positive, multi-generational change.",
+      icon: "Star",
+    },
+    {
+      id: "values",
+      title: "Values",
+      description:
+        "Rooted in Integrity, Servant Leadership, Empathy, Relentless Growth, and Moral Accountability.",
+      icon: "Diamond",
+    },
+  ],
+
   images: {
     hero: "/images/hero-portrait.jpg",
     stageHero: "/images/jaufar-stage-hero.png",
     wavingMic: "/images/jaufar-stage-hero.png",
+    cutout: "/images/jaufar-cutout.png",
+    auditorium: "/images/auditorium-packed.png",
     about: "/images/about-portrait.jpg",
     action1: "/images/speaking-session-1.jpg",
     action2: "/images/workshop-session-1.jpg",

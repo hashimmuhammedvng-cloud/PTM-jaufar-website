@@ -119,74 +119,57 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          MINIMALIST PLAIN NUMBERS (No Box)
+          ABOUT SECTION — SIMPLE & ELEGANT WITH TRANSPARENT CUTOUT PHOTO
+          (Inspired by Riyas Hakkim Reference with Cutout & "Know More" CTA)
           ========================================================================= */}
-      <ImpactCounters />
-
-      {/* =========================================================================
-          ABOUT SECTION — DIRECTLY AFTER HERO (Waving Man with Microphone Image)
-          ========================================================================= */}
-      <section id="about" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
+      <section id="about" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative overflow-hidden">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Photo: Waving Man With Microphone (5 cols) */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-gold/30 shadow-2xl aspect-[4/5] bg-navy-light group">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left Photo: Cutout of Jaufar Waving with Microphone (5 cols) */}
+            <div className="lg:col-span-5 flex justify-center items-end">
+              <div className="relative w-full max-w-sm sm:max-w-md h-[420px] sm:h-[480px] flex items-end justify-center">
                 <Image
-                  src={siteConfig.images.wavingMic}
-                  alt="PTM Jaufar Swadiq on stage with microphone"
+                  src={siteConfig.images.cutout}
+                  alt="PTM Jaufar Swadiq — Human Excellence Strategist"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 450px"
+                  className="object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.6)]"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-navy-dark/90 backdrop-blur-md border border-white/10 text-xs">
-                  <div className="font-heading font-semibold text-white">
-                    PTM Jaufar Swadiq
-                  </div>
-                  <div className="text-[11px] text-gold uppercase tracking-wider">
-                    {siteConfig.title}
-                  </div>
-                </div>
               </div>
             </div>
 
-            {/* Right Narrative: Meet PTM Jaufar Swadiq (7 cols) */}
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25">
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
-                  ABOUT PTM JAUFAR SWADIQ
-                </span>
+            {/* Right Narrative: Simple About Text + Gold Underline + "Know More" Button (7 cols) */}
+            <div className="lg:col-span-7 flex flex-col items-start space-y-5">
+              <div>
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                  About PTM Jaufar Swadiq
+                </h2>
+                {/* Gold Underline Bar */}
+                <div className="w-16 h-[3px] bg-gold mt-3.5 rounded-full" />
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-                {siteConfig.whoYouAre.title}
-              </h2>
-
-              <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-                <p>{siteConfig.whoYouAre.paragraphs[0]}</p>
-                <p>{siteConfig.whoYouAre.paragraphs[1]}</p>
+              <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal pt-2">
+                <p>
+                  PTM Jaufar Swadiq doesn't just train; he catalyzes human transformation.
+                  With a deep focus on leadership development, emotional intelligence, and
+                  human excellence, his programs are purposefully designed to empower people
+                  to discover their strengths, overcome limitations, and lead with clarity,
+                  confidence, and compassion.
+                </p>
+                <p className="text-slate-400 text-sm sm:text-base">
+                  From executive boardrooms to vibrant university auditoriums, his work
+                  turns self-awareness into purposeful action, potential into performance,
+                  and leadership into lasting influence.
+                </p>
               </div>
 
-              {/* Core Commitment Highlights */}
-              <div className="space-y-2.5 pt-2">
-                {siteConfig.whoYouAre.highlights.map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-navy-light/60 border border-white/5 text-xs sm:text-sm text-slate-200"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-2">
+              <div className="pt-3">
                 <Link
-                  href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient"
+                  href="/about"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient shadow-lg"
                 >
-                  <span>Connect with Jaufar</span>
+                  <span>Know More</span>
                   <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                 </Link>
               </div>
