@@ -48,30 +48,32 @@ export default function AboutPage() {
       </div>
 
       {/* =========================================================================
-          SECTION 1: PERSONAL STORY & BIO (Inspired by Reference Image 3)
+          SECTION 1: PERSONAL STORY & BIO — CLEAN & MINIMALIST WITH TRANSPARENT CUTOUT
           ========================================================================= */}
-      <section className="py-14 sm:py-20 border-b border-white/5 relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-24 border-b border-white/5 relative overflow-hidden">
+        {/* Subtle Ambient Radial Glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left Circular Avatar / Portrait Frame */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 border-2 border-gold/40 shadow-2xl bg-navy-light flex items-center justify-center">
-                <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10">
-                  <Image
-                    src={siteConfig.images.hero}
-                    alt="PTM Jaufar Swadiq"
-                    fill
-                    sizes="(max-width: 768px) 260px, 320px"
-                    className="object-cover object-top"
-                    priority
-                  />
-                </div>
-                {/* Ambient Glow */}
-                <div className="absolute -inset-4 bg-gold/10 rounded-full blur-2xl -z-10 pointer-events-none" />
+            {/* Left: Pure Transparent Cutout of Jaufar in Suit (5 cols) */}
+            <div className="lg:col-span-5 flex justify-center items-end">
+              <div className="relative w-full max-w-sm sm:max-w-md h-[420px] sm:h-[500px] lg:h-[560px] flex items-end justify-center">
+                {/* Soft Warm Radial Glow Behind Cutout */}
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-64 h-64 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+
+                <Image
+                  src={siteConfig.images.suitCutout}
+                  alt="PTM Jaufar Swadiq — Human Excellence Strategist"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 450px"
+                  className="object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.75)]"
+                  priority
+                />
               </div>
             </div>
 
-            {/* Right Story & Social Links */}
+            {/* Right: Story, Vision & Social Links (7 cols) */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/10 border border-gold/25">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
@@ -80,11 +82,14 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-                Hi, I'm PTM Jaufar Swadiq
-              </h1>
+              <div>
+                <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                  Hi, I'm PTM Jaufar Swadiq
+                </h1>
+                <div className="w-16 h-[3px] bg-gold mt-3.5 rounded-full" />
+              </div>
 
-              <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+              <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal pt-1">
                 <p>
                   My path has been shaped by a simple truth: genuine excellence begins
                   within. I have dedicated years to studying how emotions, values, and

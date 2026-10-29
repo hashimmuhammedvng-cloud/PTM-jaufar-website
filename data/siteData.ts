@@ -258,10 +258,11 @@ export const siteConfig = {
   images: {
     hero: "/images/hero-portrait.jpg",
     stageHero: "/images/jaufar-stage-hero.png",
-    wavingMic: "/images/jaufar-stage-hero.png",
+    wavingMic: "/images/jaufar-cutout.png",
     cutout: "/images/jaufar-cutout.png",
+    suitCutout: "/images/jaufar-suit-cutout.png",
     auditorium: "/images/auditorium-packed.png",
-    about: "/images/about-portrait.jpg",
+    about: "/images/jaufar-suit-cutout.png",
     action1: "/images/speaking-session-1.jpg",
     action2: "/images/workshop-session-1.jpg",
     action3: "/images/training-session-1.jpg",
