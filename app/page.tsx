@@ -4,7 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/data/siteData";
 import ImpactCounters from "@/components/ImpactCounters";
 import WhatYouDoSlider from "@/components/WhatYouDoSlider";
-import WhoYouHelpScrolling from "@/components/WhoYouHelpScrolling";
+import WhoYouHelpCoverflow from "@/components/WhoYouHelpCoverflow";
 import InquiryForm from "@/components/InquiryForm";
 import {
   ArrowRight,
@@ -259,23 +259,27 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          WHO YOU HELP — ANIMATED HORIZONTAL SCROLLING TRACK
+          WHO YOU HELP — INTERACTIVE 3D COVERFLOW SLIDER (MATCHING PHOTO 2)
           ========================================================================= */}
-      <section id="who-i-help" className="py-20 sm:py-28 bg-navy relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+      <section id="who-i-help" className="py-20 sm:py-28 bg-navy relative overflow-hidden">
+        {/* Subtle Ambient Glow Behind Carousel */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center relative z-10">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
-            WHO YOU HELP
+            {siteConfig.whoYouHelp.badge}
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             {siteConfig.whoYouHelp.title}
           </h2>
-          <p className="text-sm text-slate-400 mt-2">
+          <div className="w-16 h-[3px] bg-gold mx-auto mt-3.5 mb-3.5 rounded-full" />
+          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto font-normal">
             {siteConfig.whoYouHelp.subtitle}
           </p>
         </div>
 
-        {/* Infinite Scrolling Track */}
-        <WhoYouHelpScrolling />
+        {/* 3D Coverflow Carousel with 5 Cards & Centered Controls (← 1/5 →) */}
+        <WhoYouHelpCoverflow />
       </section>
 
       {/* =========================================================================

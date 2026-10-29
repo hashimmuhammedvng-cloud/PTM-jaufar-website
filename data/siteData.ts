@@ -17,6 +17,7 @@ export interface AudienceItem {
   target: string;
   description: string;
   badge: string;
+  image: string;
 }
 
 export interface WhatYouDoSlide {
@@ -111,40 +112,46 @@ export const siteConfig = {
     ],
   },
 
-  // 5. Who You Help (Animated Scrolling Track)
+  // 5. Who You Help (Interactive 3D Coverflow Carousel)
   whoYouHelp: {
+    badge: "WHO YOU HELP",
     title: "Empowering People Who Aspire to Grow",
-    subtitle: "Tailored human excellence interventions across every stage of growth.",
+    subtitle: "Tailored human excellence interventions across every stage of personal & organizational growth.",
     audiences: [
       {
         number: "01",
-        target: "Leaders and aspiring leaders",
-        description: "Seeking to enhance their leadership effectiveness and lead with empathy.",
+        target: "Leaders and Aspiring Leaders",
+        description: "Enhancing leadership effectiveness, ethical vision, strategic decision-making, and leading teams with empathy.",
         badge: "Leadership",
+        image: "/images/training-session-1.jpg",
       },
       {
         number: "02",
-        target: "Students and young professionals",
-        description: "Preparing to lead with confidence, ethical vision, and life purpose.",
+        target: "Students and Young Professionals",
+        description: "Preparing the next generation to lead with confidence, emotional maturity, life clarity, and moral purpose.",
         badge: "Next-Gen",
+        image: "/images/session-youth.jpg",
       },
       {
         number: "03",
-        target: "Educators and trainers",
-        description: "Who want to inspire, influence, and empower others through room mastery.",
+        target: "Educators and Facilitators",
+        description: "Empowering educators, teachers, and trainers to inspire, influence, and connect through room mastery.",
         badge: "Facilitators",
+        image: "/images/workshop-session-1.jpg",
       },
       {
         number: "04",
-        target: "Teams and organizations",
-        description: "Aiming to strengthen collaboration, interpersonal trust, and peak performance.",
+        target: "Teams and Organizations",
+        description: "Strengthening interpersonal trust, psychological safety, cohesive collaboration, and sustainable high performance.",
         badge: "Enterprises",
+        image: "/images/session-corporate.jpg",
       },
       {
         number: "05",
-        target: "Individuals",
-        description: "Committed to personal growth, emotional maturity, and human excellence.",
+        target: "Individuals & Growth Seekers",
+        description: "Committed to personal transformation, overcoming self-doubt, building emotional intelligence, and human excellence.",
         badge: "Growth Seekers",
+        image: "/images/speaking-session-1.jpg",
       },
     ],
   },
