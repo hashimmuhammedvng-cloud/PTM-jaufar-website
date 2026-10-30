@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { siteConfig, minimalistMetrics } from "@/data/siteData";
+import { siteConfig } from "@/data/siteData";
+import AuditoriumImpactNumbers from "@/components/AuditoriumImpactNumbers";
 import {
   InstagramIcon,
   FacebookIcon,
@@ -220,23 +221,8 @@ export default function AboutPage() {
             <div className="w-16 h-[3px] bg-gold mx-auto mt-3.5 rounded-full" />
           </div>
 
-          {/* Numbers Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
-            {minimalistMetrics.map((m) => (
-              <div key={m.id} className="flex flex-col items-center">
-                <div className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight drop-shadow-lg">
-                  {m.value.toLocaleString()}
-                  <span className="text-gold ml-1">{m.suffix}</span>
-                </div>
-                <div className="font-heading font-semibold text-base sm:text-lg text-slate-100 mt-2">
-                  {m.label}
-                </div>
-                <div className="text-xs text-gold/90 font-medium mt-0.5">
-                  {m.sublabel}
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Animated Numbers Grid */}
+          <AuditoriumImpactNumbers />
         </div>
       </section>
 
