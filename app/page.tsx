@@ -276,30 +276,6 @@ export default function HomePage() {
         <WhoYouHelpCoverflow />
       </section>
 
-      {/* =========================================================================
-          TRANSFORMATION
-          ========================================================================= */}
-      <section id="transformation" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
-              TRANSFORMATION
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-              {siteConfig.transformation.title}
-            </h2>
-            <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed text-left sm:text-center">
-              <p>{siteConfig.transformation.paragraphs[0]}</p>
-              <p>{siteConfig.transformation.paragraphs[1]}</p>
-            </div>
-
-            {/* Closing Motto Highlight */}
-            <div className="mt-8 p-6 rounded-2xl bg-navy-light/60 border border-gold/30 text-white font-heading font-semibold text-lg sm:text-xl">
-              “{siteConfig.transformation.closingMotto}”
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* =========================================================================
           CALL TO ACTION, SOCIAL CHANNELS & INQUIRY FORM

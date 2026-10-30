@@ -113,11 +113,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#transformation" className="hover:text-gold transition-colors">
-                  Transformation
-                </Link>
-              </li>
-              <li>
                 <Link href="/#expertise" className="hover:text-gold transition-colors">
                   Areas of Expertise
                 </Link>

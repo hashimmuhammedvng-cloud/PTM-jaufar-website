@@ -12,7 +12,6 @@ const navLinks = [
   { label: "What I Do", href: "/#what-i-do" },
   { label: "Expertise", href: "/#expertise" },
   { label: "Who I Help", href: "/#who-i-help" },
-  { label: "Transformation", href: "/#transformation" },
   { label: "Contact", href: "/#contact" },
 ];
 
