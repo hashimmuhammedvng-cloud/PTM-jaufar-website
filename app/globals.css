@@ -5,12 +5,12 @@
 @tailwind utilities;
 
 :root {
-  --color-navy: #101C2C;
-  --color-navy-dark: #0A121D;
-  --color-navy-light: #162438;
-  --color-gold: #C5A15A;
-  --color-gold-light: #DFBA73;
-  --color-gold-dark: #9E7E3C;
+  --color-navy: #0B1526;
+  --color-navy-dark: #060C16;
+  --color-navy-light: #132238;
+  --color-gold: #D1A751;
+  --color-gold-light: #EED59B;
+  --color-gold-dark: #94712F;
   --color-ivory: #F7F4ED;
   --color-white: #FFFFFF;
   --color-charcoal: #25292E;
@@ -31,7 +31,12 @@ html {
 body {
   font-family: var(--font-body);
   color: #D1D5DB;
-  background-color: var(--color-navy);
+  background-color: #070D18;
+  background-image: 
+    radial-gradient(ellipse 90% 50% at 50% 0%, rgba(209, 167, 81, 0.09), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 35%, rgba(26, 47, 76, 0.45), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 0% 75%, rgba(26, 47, 76, 0.35), transparent 60%);
+  background-attachment: fixed;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,18 +56,18 @@ body {
   font-family: var(--font-body);
 }
 
-/* Metallic Gold Gradient Button */
+/* Metallic Gold Gradient Button (Silk Gold Ribbon Match) */
 .btn-gold-gradient {
-  background: linear-gradient(135deg, #DFBA73 0%, #C5A15A 50%, #A3823E 100%);
-  color: #101C2C;
+  background: linear-gradient(135deg, #F5E2B3 0%, #D1A751 50%, #94712F 100%);
+  color: #060C16;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px -2px rgba(197, 161, 90, 0.35);
+  box-shadow: 0 4px 16px -2px rgba(209, 167, 81, 0.45), 0 0 10px rgba(209, 167, 81, 0.18);
 }
 
 .btn-gold-gradient:hover {
-  background: linear-gradient(135deg, #FFF4D4 0%, #DFBA73 40%, #C5A15A 100%);
-  box-shadow: 0 6px 20px -2px rgba(197, 161, 90, 0.55);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #FFF8E6 0%, #EED59B 42%, #D1A751 100%);
+  box-shadow: 0 6px 24px -2px rgba(209, 167, 81, 0.65), 0 0 20px rgba(245, 226, 179, 0.35);
+  transform: translateY(-1.5px);
 }
 
 .btn-gold-gradient:active {
@@ -82,16 +87,16 @@ body {
 .gold-shimmer-text {
   background: linear-gradient(
     90deg,
-    #C5A15A 0%,
-    #DFBA73 25%,
-    #FFF8E1 50%,
-    #DFBA73 75%,
-    #C5A15A 100%
+    #D1A751 0%,
+    #EED59B 25%,
+    #FFFDF5 50%,
+    #EED59B 75%,
+    #D1A751 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: goldShimmer 5s ease-in-out infinite;
+  animation: goldShimmer 4.5s ease-in-out infinite;
   display: inline-block;
   will-change: background-position;
 }

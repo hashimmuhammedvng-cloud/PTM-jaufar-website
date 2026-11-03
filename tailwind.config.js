@@ -10,16 +10,18 @@ module.exports = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#101C2C",
-          dark: "#0A121D",
-          light: "#162438",
-          card: "#121E2F",
+          DEFAULT: "#0B1526", // Regal Midnight Navy (from user reference)
+          dark: "#060C16",    // Deep Navy Silk Shadow
+          light: "#132238",   // Luminous Navy Ribbon Surface
+          card: "#0F1C30",    // Rich Navy Card Base
+          accent: "#1A2F4C",  // Highlight Navy Ridge
         },
         gold: {
-          DEFAULT: "#C5A15A",
-          light: "#DFBA73",
-          dark: "#9E7E3C",
-          muted: "rgba(197, 161, 90, 0.12)",
+          DEFAULT: "#D1A751", // Lustrous Silk Gold
+          light: "#EED59B",   // Champagne Gold Highlight
+          bright: "#F7E8C3",  // Radiant Apex Gold
+          dark: "#94712F",    // Deep Sculpted Bronze-Gold
+          muted: "rgba(209, 167, 81, 0.14)",
         },
         ivory: {
           DEFAULT: "#F7F4ED",

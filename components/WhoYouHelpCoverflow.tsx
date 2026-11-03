@@ -148,7 +148,7 @@ export default function WhoYouHelpCoverflow() {
               }}
               className={`absolute top-1/2 left-1/2 w-[280px] sm:w-[340px] md:w-[390px] lg:w-[420px] h-[400px] sm:h-[460px] md:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 border ${
                 isActive
-                  ? "border-gold/50 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_35px_rgba(197,161,90,0.18)]"
+                  ? "border-gold/60 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85),0_0_35px_rgba(209,167,81,0.25)]"
                   : "border-white/10 hover:border-gold/30 hover:opacity-90"
               }`}
             >
