@@ -52,21 +52,24 @@ export default function HomePage() {
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy to-transparent" />
         </div>
 
+        {/* Animated Light White & Royal Blue Ambient Glow */}
+        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-blue-600/20 via-sky-300/15 to-white/10 blur-[130px] pointer-events-none animate-pulse duration-[7000ms]" />
+
         {/* Hero Foreground Content */}
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-xl lg:max-w-lg xl:max-w-xl flex flex-col items-start space-y-6">
             {/* Eyebrow Label */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-dark/90 border border-gold/30 backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-dark/90 border border-sky-400/35 backdrop-blur-md shadow-lg">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky-200">
                 {siteConfig.title}
               </span>
             </div>
 
-            {/* Impactful Headline with Cinematic Reveal & Gold Shimmer */}
+            {/* Impactful Headline with Cinematic Reveal & Animated White & Blue Gradient */}
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase flex flex-col items-start">
               <span className="animate-hero-line-1 inline-block">
-                Unlock <span className="gold-shimmer-text">Human Potential.</span>
+                Unlock <span className="white-blue-shimmer-text">Human Potential.</span>
               </span>
               <span className="animate-hero-line-2 inline-block">
                 Inspire Leadership.
@@ -87,19 +90,19 @@ export default function HomePage() {
                 href="#contact"
                 className="group inline-flex items-center gap-3.5 text-left focus:outline-none"
               >
-                {/* Circular Accent Badge with Arrow */}
-                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-navy-dark/90 border border-gold/40 flex items-center justify-center p-1 shadow-xl group-hover:border-gold transition-all duration-300 shrink-0">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full btn-gold-gradient flex items-center justify-center text-navy group-hover:scale-105 transition-all shadow-md">
+                {/* Circular Accent Badge with Arrow (White & Blue Gradient) */}
+                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-navy-dark/90 border border-sky-400/40 flex items-center justify-center p-1 shadow-xl group-hover:border-sky-300 transition-all duration-300 shrink-0">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full btn-white-blue-gradient flex items-center justify-center text-navy-dark group-hover:scale-105 transition-all shadow-md">
                     <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                   </div>
                 </div>
 
                 {/* Button Text */}
                 <div className="flex flex-col">
-                  <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-gold transition-colors">
+                  <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-sky-300 transition-colors">
                     Invite Jaufar for Your Event
                   </span>
-                  <span className="text-xs text-gold/90 font-medium">
+                  <span className="text-xs text-sky-300/90 font-medium">
                     Keynote Speaking & Training →
                   </span>
                 </div>
@@ -167,7 +170,7 @@ export default function HomePage() {
               <div className="pt-3">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient shadow-lg"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient shadow-lg"
                 >
                   <span>Know More</span>
                   <ArrowRight className="w-4 h-4 stroke-[2.5]" />

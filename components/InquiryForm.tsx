@@ -76,6 +76,24 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
           ...formData,
         });
         localStorage.setItem("ptm_inquiries", JSON.stringify(stored));
+
+        // Direct WhatsApp transmission if configured
+        const cleanPhone = siteConfig.contact.whatsapp?.replace(/[^0-9]/g, "");
+        if (cleanPhone) {
+          const text = encodeURIComponent(
+            `*New Inquiry for PTM Jaufar Swadiq*\n` +
+            `━━━━━━━━━━━━━━━━━━━━━━\n` +
+            `👤 *Name:* ${formData.fullName}\n` +
+            `📧 *Email:* ${formData.email}\n` +
+            (formData.phone ? `📞 *Phone:* ${formData.phone}\n` : "") +
+            (formData.organization ? `🏢 *Organization:* ${formData.organization}\n` : "") +
+            `🎯 *Focus Area:* ${formData.inquiryType}\n` +
+            `📝 *Requirements:*\n${formData.message}\n` +
+            `━━━━━━━━━━━━━━━━━━━━━━\n` +
+            `🔖 *Reference ID:* ${newId}`
+          );
+          window.open(`https://wa.me/${cleanPhone}?text=${text}`, "_blank");
+        }
       }
 
       setStatus("success");
@@ -239,7 +257,7 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient disabled:opacity-60"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient disabled:opacity-60"
             >
               {status === "loading" ? (
                 <>

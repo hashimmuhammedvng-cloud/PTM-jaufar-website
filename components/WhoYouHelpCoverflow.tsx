@@ -211,14 +211,14 @@ export default function WhoYouHelpCoverflow() {
         })}
       </div>
 
-      {/* Navigation Controls Row — Exact Match to Reference: ( ← )  1 / 5  ( → ) */}
+      {/* Navigation Controls Row — ( ← )  1 / 5  ( → ) with White & Blue Accent */}
       <div className="flex items-center justify-center gap-6 mt-6 sm:mt-8">
         {/* Previous Button */}
         <button
           type="button"
           onClick={handlePrev}
           aria-label="Previous card"
-          className="w-11 h-11 rounded-full border border-gold/40 text-gold hover:border-gold hover:bg-gold hover:text-navy active:scale-95 transition-all duration-200 flex items-center justify-center shadow-lg group focus:outline-none"
+          className="w-11 h-11 rounded-full border border-sky-400/40 text-sky-200 hover:border-white hover:btn-white-blue-gradient hover:text-navy-dark active:scale-95 transition-all duration-200 flex items-center justify-center shadow-lg group focus:outline-none"
         >
           <ArrowLeft className="w-4 h-4 stroke-[2.2] group-hover:-translate-x-0.5 transition-transform" />
         </button>
@@ -228,7 +228,7 @@ export default function WhoYouHelpCoverflow() {
           <span className="text-white font-bold text-lg sm:text-xl">
             {activeIndex + 1}
           </span>
-          <span className="text-gold/70 font-light">/</span>
+          <span className="text-sky-400/70 font-light">/</span>
           <span className="text-slate-400">
             {total}
           </span>
@@ -239,7 +239,7 @@ export default function WhoYouHelpCoverflow() {
           type="button"
           onClick={handleNext}
           aria-label="Next card"
-          className="w-11 h-11 rounded-full border border-gold/40 text-gold hover:border-gold hover:bg-gold hover:text-navy active:scale-95 transition-all duration-200 flex items-center justify-center shadow-lg group focus:outline-none"
+          className="w-11 h-11 rounded-full border border-sky-400/40 text-sky-200 hover:border-white hover:btn-white-blue-gradient hover:text-navy-dark active:scale-95 transition-all duration-200 flex items-center justify-center shadow-lg group focus:outline-none"
         >
           <ArrowRight className="w-4 h-4 stroke-[2.2] group-hover:translate-x-0.5 transition-transform" />
         </button>

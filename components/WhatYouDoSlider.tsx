@@ -45,7 +45,7 @@ export default function WhatYouDoSlider() {
             onClick={() => setActiveIdx(idx)}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
               activeIdx === idx
-                ? "bg-gold text-navy shadow-lg shadow-gold/25 scale-[1.02]"
+                ? "btn-white-blue-gradient scale-[1.02] shadow-lg shadow-sky-500/25"
                 : "bg-navy-light/60 text-slate-300 hover:text-white hover:bg-navy-light border border-white/10"
             }`}
           >

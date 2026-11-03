@@ -33,9 +33,9 @@ body {
   color: #D1D5DB;
   background-color: #070D18;
   background-image: 
-    radial-gradient(ellipse 90% 50% at 50% 0%, rgba(209, 167, 81, 0.09), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 100% 35%, rgba(26, 47, 76, 0.45), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 0% 75%, rgba(26, 47, 76, 0.35), transparent 60%);
+    radial-gradient(ellipse 90% 50% at 50% 0%, rgba(224, 242, 254, 0.12), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 35%, rgba(56, 189, 248, 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 0% 75%, rgba(30, 58, 102, 0.4), transparent 60%);
   background-attachment: fixed;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -43,8 +43,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-gold);
-  color: var(--color-navy);
+  background-color: #38BDF8;
+  color: #060C16;
 }
 
 .font-heading {
@@ -54,6 +54,24 @@ body {
 
 .font-body {
   font-family: var(--font-body);
+}
+
+/* Luminous Light White & Blue Gradient Button */
+.btn-white-blue-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0F2FE 35%, #7DD3FC 75%, #38BDF8 100%);
+  color: #060C16;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px -2px rgba(56, 189, 248, 0.45), 0 0 16px rgba(224, 242, 254, 0.3);
+}
+
+.btn-white-blue-gradient:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #BAE6FD 45%, #60A5FA 100%);
+  box-shadow: 0 6px 26px -2px rgba(56, 189, 248, 0.7), 0 0 22px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1.5px);
+}
+
+.btn-white-blue-gradient:active {
+  transform: scale(0.98);
 }
 
 /* Metallic Gold Gradient Button (Silk Gold Ribbon Match) */
@@ -72,6 +90,35 @@ body {
 
 .btn-gold-gradient:active {
   transform: scale(0.98);
+}
+
+/* Animated Light White & Royal Blue Gradient Shimmer */
+@keyframes whiteBlueShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.white-blue-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #FFFFFF 0%,
+    #E0F2FE 18%,
+    #38BDF8 38%,
+    #FFFFFF 50%,
+    #60A5FA 68%,
+    #BAE6FD 85%,
+    #FFFFFF 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: whiteBlueShimmer 4s ease-in-out infinite;
+  display: inline-block;
+  will-change: background-position;
 }
 
 /* Metallic Gold Shimmer Sweep Animation */

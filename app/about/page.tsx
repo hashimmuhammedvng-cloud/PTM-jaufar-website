@@ -241,7 +241,7 @@ export default function AboutPage() {
           <div className="pt-2">
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient shadow-xl"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient shadow-xl"
             >
               <span>Invite Jaufar to Speak or Train</span>
               <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />

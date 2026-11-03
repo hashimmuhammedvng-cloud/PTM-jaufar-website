@@ -94,11 +94,11 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Desktop Primary CTA Button — Metallic Gold Gradient */}
+            {/* Desktop Primary CTA Button — Luminous White & Blue Gradient */}
             <div className="hidden lg:flex items-center shrink-0">
               <Link
                 href="/#contact"
-                className="whitespace-nowrap inline-flex items-center gap-1.5 px-4 py-2 rounded-button text-xs font-semibold uppercase tracking-wider btn-gold-gradient"
+                className="whitespace-nowrap inline-flex items-center gap-1.5 px-4 py-2 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient shadow-md"
               >
                 <span>Invite to Speak or Train</span>
                 <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -178,7 +178,7 @@ export default function Navbar() {
             <Link
               href="/#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-button text-xs font-semibold uppercase tracking-wider btn-gold-gradient"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient shadow-md"
             >
               <span>Invite to Speak or Train</span>
               <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
