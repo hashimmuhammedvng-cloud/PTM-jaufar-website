@@ -12,16 +12,24 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # 2. Prevent direct access to .html if user typed it (canonical redirect to clean URL)
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
-    RewriteRule ^ %1/ [R=301,L]
+    # 2. Canonical redirect: /index.html -> /
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.html [NC]
+    RewriteRule ^index\.html$ / [R=301,L]
 
-    # 3. Clean URLs: internally serve file.html if requested without extension
+    # 3. Canonical redirect: /dir/index.html or /dir/index/ -> /dir/
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/(.+)/index(\.html|/)?(\s|\?) [NC]
+    RewriteRule ^(.*)/index(\.html|/)?$ /$1/ [R=301,L]
+
+    # 4. Strip .html extension if typed directly (e.g. /about.html -> /about/)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.html [NC]
+    RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
+
+    # 5. Clean URLs: internally serve file.html if requested without extension
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{DOCUMENT_ROOT}/$1.html -f
     RewriteRule ^(.+?)/?$ $1.html [L]
 
-    # 4. Trailing slash normalization for directories
+    # 6. Trailing slash normalization for directories
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteCond %{REQUEST_URI} !(.*)/$
     RewriteRule ^(.*)$ $1/ [L,R=301]
@@ -79,3 +87,4 @@ ErrorDocument 404 /404.html
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+

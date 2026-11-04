@@ -134,3 +134,4 @@ If you ever want to review or restore the React/Next.js source in the future:
 ```bash
 git checkout nextjs-source
 ```
+
