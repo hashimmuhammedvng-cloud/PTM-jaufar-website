@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/data/siteData";
-import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { InstagramIcon, FacebookIcon, LinkedinIcon, YoutubeIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
@@ -136,28 +136,10 @@ export default function Footer() {
               and customized organizational programs.
             </p>
 
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-gold shrink-0" />
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="text-slate-200 hover:text-gold transition-colors text-xs sm:text-sm"
-                >
-                  {siteConfig.contact.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-gold shrink-0" />
-                <span className="text-slate-400 text-xs sm:text-sm">
-                  {siteConfig.contact.location}
-                </span>
-              </div>
-            </div>
-
             <div className="pt-2">
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-button text-xs font-semibold uppercase tracking-wider btn-gold-gradient"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-button text-xs font-semibold uppercase tracking-wider btn-gold-gradient shadow-md"
               >
                 <span>Invite to Speak or Train</span>
                 <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
