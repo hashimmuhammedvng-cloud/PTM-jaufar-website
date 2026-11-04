@@ -1,42 +1,26 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# Operating System files
 .DS_Store
-*.pem
+Thumbs.db
+desktop.ini
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env
-.env*.local
-.env.development
-.env.production
-.env.test
-!.env.example
-
-# editor / IDE
+# Editor / IDE
 .vscode/
+.idea/
+*.swp
+*.swo
 
-# vercel
-.vercel
+# Node / Build artifacts (if ever reintroduced locally)
+node_modules/
+.next/
+out/
+build/
+dist/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Python cache (if build scripts are used)
+__pycache__/
+*.pyc
 
+# Environment & logs
+*.log
+.env
+.env.local
