@@ -213,16 +213,6 @@ export default function AboutPage() {
         </div>
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
-              DOCUMENTED REACH & ENGAGEMENT
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight">
-              Evidence of Enduring Impact
-            </h2>
-            <div className="w-16 h-[3px] bg-gold mx-auto mt-3.5 rounded-full" />
-          </div>
-
           {/* Animated Numbers Grid */}
           <AuditoriumImpactNumbers />
         </div>
