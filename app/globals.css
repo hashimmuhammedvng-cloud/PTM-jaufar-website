@@ -183,6 +183,87 @@ select:focus-visible {
   animation-play-state: paused;
 }
 
+/* =========================================================================
+   ANIMATED SILK NAVY GRADIENT MOTION SYSTEM
+   Continuous, fluid, GPU-accelerated drift matching Image 2
+   ========================================================================= */
+@keyframes silkOrb1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(140px, -90px, 0) scale(1.18) rotate(45deg);
+  }
+  66% {
+    transform: translate3d(-100px, 120px, 0) scale(0.92) rotate(90deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(180deg);
+  }
+}
+
+@keyframes silkOrb2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(-150px, 110px, 0) scale(1.22) rotate(-40deg);
+  }
+  66% {
+    transform: translate3d(120px, -130px, 0) scale(0.88) rotate(-90deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(-180deg);
+  }
+}
+
+@keyframes silkOrb3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(110px, 140px, 0) scale(1.15);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes silkGoldDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    opacity: 0.16;
+  }
+  50% {
+    transform: translate3d(-130px, -110px, 0) scale(1.3) rotate(60deg);
+    opacity: 0.28;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(120deg);
+    opacity: 0.16;
+  }
+}
+
+.animate-silk-orb-1 {
+  animation: silkOrb1 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-silk-orb-2 {
+  animation: silkOrb2 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-silk-orb-3 {
+  animation: silkOrb3 15s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-silk-gold {
+  animation: silkGoldDrift 24s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -196,5 +277,11 @@ select:focus-visible {
     background: #C5A15A !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+  }
+  .animate-silk-orb-1,
+  .animate-silk-orb-2,
+  .animate-silk-orb-3,
+  .animate-silk-gold {
+    animation: none !important;
   }
 }

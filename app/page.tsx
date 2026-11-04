@@ -33,7 +33,7 @@ export default function HomePage() {
       {/* =========================================================================
           HERO SECTION — BRIGHT VISIBLE STAGE PHOTO & LUXURY NAVY GRADIENT
           ========================================================================= */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-gradient-to-b from-[#081324] via-[#0E203B] to-[#070F1E]">
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-gradient-to-b from-[#081324]/80 via-[#0E203B]/60 to-[#070F1E]/80">
         {/* Stage Photo on the Right */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[55%] h-full z-0 pointer-events-none">
           <Image
@@ -52,8 +52,8 @@ export default function HomePage() {
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#070F1E] to-transparent" />
         </div>
 
-        {/* Multi-Dimensional Silk Navy & Ambient Gold Glow (Image 2 Inspiration) */}
-        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full bg-gradient-to-tr from-[#163666]/40 via-[#1F4682]/25 to-gold/5 blur-[140px] pointer-events-none" />
+        {/* Multi-Dimensional Silk Navy & Ambient Gold Glow (Animated Fluid Drift) */}
+        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-[#1E4D94]/50 via-[#153B75]/30 to-gold/10 blur-[120px] pointer-events-none animate-silk-orb-1" />
 
         {/* Hero Foreground Content */}
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -125,9 +125,9 @@ export default function HomePage() {
           ABOUT SECTION — SIMPLE & ELEGANT WITH TRANSPARENT CUTOUT PHOTO
           (Anchored to Bottom Line like a Clipping Mask Model)
           ========================================================================= */}
-      <section id="about" className="pt-20 sm:pt-28 pb-0 bg-gradient-to-b from-[#070F1E] via-[#0B1A33] to-[#070F1E] border-y border-white/5 relative overflow-hidden">
-        {/* Subtle Silk Glow Accent */}
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-blue-700/20 via-sky-400/10 to-gold/10 rounded-full blur-[130px] pointer-events-none" />
+      <section id="about" className="pt-20 sm:pt-28 pb-0 bg-gradient-to-b from-[#070F1E]/80 via-[#0B1A33]/65 to-[#070F1E]/80 border-y border-white/5 relative overflow-hidden">
+        {/* Subtle Silk Glow Accent — Moving Wave */}
+        <div className="absolute bottom-0 left-1/4 w-[520px] h-[520px] bg-gradient-to-tr from-blue-700/25 via-sky-400/15 to-gold/15 rounded-full blur-[115px] pointer-events-none animate-silk-orb-3" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
@@ -190,9 +190,9 @@ export default function HomePage() {
       {/* =========================================================================
           WHAT YOU DO — INTERACTIVE SLIDER WITH 3 IMAGES
           ========================================================================= */}
-      <section id="what-i-do" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0F2242] to-[#070F1E] relative overflow-hidden">
-        {/* Subtle Ambient Silk Navy Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-900/20 via-[#15315C]/25 to-blue-900/20 rounded-full blur-[130px] pointer-events-none" />
+      <section id="what-i-do" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E]/75 via-[#0F2242]/60 to-[#070F1E]/75 relative overflow-hidden">
+        {/* Animated Silk Navy Drift Bloom */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-r from-blue-900/30 via-indigo-600/25 to-blue-900/30 rounded-full blur-[115px] pointer-events-none animate-silk-orb-2" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-10">
@@ -210,7 +210,7 @@ export default function HomePage() {
       {/* =========================================================================
           TOPICS / EXPERTISE — 3 CORE PILLARS
           ========================================================================= */}
-      <section id="expertise" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0A182E] to-[#060D1A] border-y border-white/5 relative">
+      <section id="expertise" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E]/80 via-[#0A182E]/65 to-[#060D1A]/80 border-y border-white/5 relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
@@ -267,9 +267,9 @@ export default function HomePage() {
       {/* =========================================================================
           WHO YOU HELP — INTERACTIVE 3D COVERFLOW SLIDER (MATCHING PHOTO 2)
           ========================================================================= */}
-      <section id="who-i-help" className="py-20 sm:py-28 bg-gradient-to-b from-[#060D1A] via-[#102547] to-[#070F1F] relative overflow-hidden">
-        {/* Subtle Ambient Silk Navy Glow Behind Carousel */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[380px] bg-gradient-to-r from-[#143260]/30 via-gold/5 to-[#143260]/30 rounded-full blur-[130px] pointer-events-none" />
+      <section id="who-i-help" className="py-20 sm:py-28 bg-gradient-to-b from-[#060D1A]/75 via-[#102547]/60 to-[#070F1F]/75 relative overflow-hidden">
+        {/* Subtle Ambient Silk Navy & Gold Glow Behind Carousel — Animated */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-[#143260]/40 via-gold/12 to-[#143260]/40 rounded-full blur-[115px] pointer-events-none animate-silk-gold" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center relative z-10">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
@@ -291,9 +291,9 @@ export default function HomePage() {
       {/* =========================================================================
           CALL TO ACTION, SOCIAL CHANNELS & INQUIRY FORM
           ========================================================================= */}
-      <section id="contact" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1F] via-[#0C1B33] to-[#050A14] border-t border-gold/15 relative overflow-hidden">
-        {/* Soft Ambient Depth Glow */}
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/15 rounded-full blur-[140px] pointer-events-none" />
+      <section id="contact" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1F]/80 via-[#0C1B33]/60 to-[#050A14]/90 border-t border-gold/15 relative overflow-hidden">
+        {/* Soft Ambient Depth Glow — Moving Wave */}
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[650px] h-[650px] bg-blue-800/25 rounded-full blur-[125px] pointer-events-none animate-silk-orb-1" />
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Info & Social Channels (5 cols) */}

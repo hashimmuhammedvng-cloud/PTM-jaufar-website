@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AnimatedSilkBackground from "@/components/AnimatedSilkBackground";
 import { siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
@@ -67,9 +68,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-navy text-slate-200 antialiased selection:bg-gold selection:text-navy font-body">
+      <body className="min-h-screen flex flex-col text-slate-200 antialiased selection:bg-gold selection:text-navy font-body relative">
+        <AnimatedSilkBackground />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

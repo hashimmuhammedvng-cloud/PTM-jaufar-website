@@ -51,9 +51,9 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 1: PERSONAL STORY & BIO — CLEAN & MINIMALIST WITH TRANSPARENT CUTOUT
           ========================================================================= */}
-      <section className="py-16 sm:py-24 border-b border-white/5 relative overflow-hidden bg-gradient-to-b from-[#091528] via-[#0F2342] to-[#070F1E]">
-        {/* Subtle Ambient Radial Glow */}
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
+      <section className="py-16 sm:py-24 border-b border-white/5 relative overflow-hidden bg-gradient-to-b from-[#091528]/85 via-[#0F2342]/70 to-[#070F1E]/85">
+        {/* Animated Ambient Silk Glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-700/25 via-gold/15 to-transparent rounded-full blur-[115px] pointer-events-none animate-silk-orb-1" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -157,7 +157,9 @@ export default function AboutPage() {
           SECTION 2: OUR FOUNDATION (Inspired by Reference Image 4)
           (Vision • Mission • Purpose • Values)
           ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0C1B33] to-[#060C16] border-b border-white/5 relative">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E]/80 via-[#0C1B33]/65 to-[#060C16]/80 border-b border-white/5 relative overflow-hidden">
+        {/* Animated Silk Drift Accent */}
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-blue-800/20 rounded-full blur-[120px] pointer-events-none animate-silk-orb-2" />
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-14">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -229,7 +231,9 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 4: CALL TO ACTION
           ========================================================================= */}
-      <section className="py-20 bg-gradient-to-b from-[#060C16] via-[#0E203B] to-[#050A14] text-center border-t border-white/5">
+      <section className="py-20 bg-gradient-to-b from-[#060C16]/80 via-[#0E203B]/65 to-[#050A14]/90 text-center border-t border-white/5 relative overflow-hidden">
+        {/* Animated Silk Gold Drift */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-blue-900/30 via-gold/15 to-transparent rounded-full blur-[115px] pointer-events-none animate-silk-gold" />
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Ready to Unlock Human Excellence?
