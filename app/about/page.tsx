@@ -59,16 +59,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
             {/* Left: Pure Transparent Front-Facing Pose Cutout (5 cols) */}
             <div className="lg:col-span-5 flex justify-center items-end self-end -mb-px">
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-[460px] sm:h-[520px] lg:h-[580px] flex items-end justify-center">
+              <div className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[560px] xl:max-w-[600px] h-[520px] sm:h-[600px] lg:h-[660px] xl:h-[700px] flex items-end justify-center">
                 {/* Soft Warm Radial Glow Behind Cutout */}
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-72 h-72 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-80 h-80 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px] bg-gold/15 rounded-full blur-3xl pointer-events-none" />
 
                 <Image
                   src={siteConfig.images.frontPose}
                   alt="PTM Jaufar Swadiq — Human Excellence Strategist"
                   fill
-                  sizes="(max-width: 768px) 100vw, 500px"
-                  className="object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] relative z-10"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  className="object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] relative z-10 scale-[1.08] sm:scale-[1.12] lg:scale-[1.18] origin-bottom"
                   priority
                 />
               </div>
