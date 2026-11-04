@@ -179,7 +179,7 @@ export default function WhoYouHelpCoverflow() {
 
               {/* Bottom Card Content: Title, Description & Action */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-10 flex flex-col justify-end">
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-white tracking-tight leading-snug drop-shadow-md">
+                <h3 className="font-heading font-semibold text-xl sm:text-2xl text-white tracking-tight leading-snug drop-shadow-md">
                   {aud.target}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-200 mt-2.5 leading-relaxed font-normal line-clamp-3 drop-shadow">

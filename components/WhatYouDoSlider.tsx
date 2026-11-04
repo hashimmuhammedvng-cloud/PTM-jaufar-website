@@ -73,7 +73,7 @@ export default function WhatYouDoSlider() {
               <span className="text-xs font-bold uppercase tracking-[0.16em] text-gold-light block mb-1">
                 {currentSlide.subtitle}
               </span>
-              <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+              <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-white tracking-tight">
                 {currentSlide.title}
               </h3>
             </div>

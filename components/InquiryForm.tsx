@@ -119,7 +119,7 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
             <CheckCircle2 className="w-7 h-7 text-gold" />
           </div>
 
-          <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
+          <h3 className="font-heading text-xl sm:text-2xl font-semibold text-white">
             Inquiry Successfully Transmitted
           </h3>
 
@@ -150,7 +150,7 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
           <div className="border-b border-white/10 pb-3">
-            <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
+            <h3 className="font-heading text-xl sm:text-2xl font-semibold text-white">
               Connect with PTM Jaufar Swadiq
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mt-1">

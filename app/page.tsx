@@ -216,7 +216,7 @@ export default function HomePage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
               AREAS OF EXPERTISE
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight">
               Core Training Disciplines
             </h2>
             <p className="text-sm text-slate-400">
@@ -235,7 +235,7 @@ export default function HomePage() {
                     {pillarIcons[idx]}
                   </div>
 
-                  <h3 className="font-heading text-xl font-bold text-white mb-6">
+                  <h3 className="font-heading text-xl font-semibold text-white mb-6">
                     {item.title}
                   </h3>
 
@@ -275,7 +275,7 @@ export default function HomePage() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
             {siteConfig.whoYouHelp.badge}
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight">
             {siteConfig.whoYouHelp.title}
           </h2>
           <div className="w-16 h-[3px] bg-gold mx-auto mt-3.5 mb-3.5 rounded-full" />
@@ -302,7 +302,7 @@ export default function HomePage() {
                 CALL TO ACTION
               </span>
 
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+              <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight leading-tight">
                 {siteConfig.callToAction.title}
               </h2>
 

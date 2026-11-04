@@ -35,7 +35,7 @@ export default function WhoYouHelpScrolling() {
               </div>
 
               {/* Title */}
-              <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-gold transition-colors">
+              <h3 className="font-heading font-semibold text-lg text-white mb-2 group-hover:text-gold transition-colors">
                 {aud.target}
               </h3>
 

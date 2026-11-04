@@ -162,7 +162,7 @@ export default function AboutPage() {
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-blue-800/20 rounded-full blur-[120px] pointer-events-none animate-silk-orb-2" />
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-14">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight">
               Our Foundation
             </h2>
             {/* Gold Underline Bar */}
@@ -181,7 +181,7 @@ export default function AboutPage() {
                   {foundationIcons[item.id]}
                 </div>
 
-                <h3 className="font-heading font-bold text-xl text-white mb-3 group-hover:text-gold transition-colors">
+                <h3 className="font-heading font-semibold text-xl text-white mb-3 group-hover:text-gold transition-colors">
                   {item.title}
                 </h3>
 
@@ -217,7 +217,7 @@ export default function AboutPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
               DOCUMENTED REACH & ENGAGEMENT
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight">
               Evidence of Enduring Impact
             </h2>
             <div className="w-16 h-[3px] bg-gold mx-auto mt-3.5 rounded-full" />
@@ -235,7 +235,7 @@ export default function AboutPage() {
         {/* Animated Silk Gold Drift */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-blue-900/30 via-gold/15 to-transparent rounded-full blur-[115px] pointer-events-none animate-silk-gold" />
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight">
             Ready to Unlock Human Excellence?
           </h2>
           <p className="text-slate-300 text-base leading-relaxed">
