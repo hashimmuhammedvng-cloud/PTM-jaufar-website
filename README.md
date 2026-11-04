@@ -66,7 +66,7 @@ All interactive functionality is powered by `assets/js/main.js` with **zero exte
    - 5.5-second auto-rotation with hover pause.
 5. **Animated Impact Number Counters**:
    - `IntersectionObserver` triggers smooth cubic-eased count-up animation when scrolling into view:
-     - `25,000+` Individuals Reached
+     - `5,500+` Individuals Reached
      - `650+` Sessions Facilitated
      - `200+` Keynotes & Events
      - `85+` Programs Delivered
