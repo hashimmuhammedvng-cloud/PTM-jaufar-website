@@ -51,31 +51,31 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 1: PERSONAL STORY & BIO — CLEAN & MINIMALIST WITH TRANSPARENT CUTOUT
           ========================================================================= */}
-      <section className="py-16 sm:py-24 border-b border-white/5 relative overflow-hidden bg-gradient-to-b from-[#091528]/85 via-[#0F2342]/70 to-[#070F1E]/85">
+      <section className="pt-16 sm:pt-24 pb-0 border-b border-white/5 relative overflow-hidden bg-gradient-to-b from-[#091528]/85 via-[#0F2342]/70 to-[#070F1E]/85">
         {/* Animated Ambient Silk Glow */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-700/25 via-gold/15 to-transparent rounded-full blur-[115px] pointer-events-none animate-silk-orb-1" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left: Pure Transparent Cutout of Jaufar in Suit (5 cols) */}
-            <div className="lg:col-span-5 flex justify-center items-end">
-              <div className="relative w-full max-w-sm sm:max-w-md h-[420px] sm:h-[500px] lg:h-[560px] flex items-end justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
+            {/* Left: Pure Transparent Front-Facing Pose Cutout (5 cols) */}
+            <div className="lg:col-span-5 flex justify-center items-end self-end -mb-px">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-[460px] sm:h-[520px] lg:h-[580px] flex items-end justify-center">
                 {/* Soft Warm Radial Glow Behind Cutout */}
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-64 h-64 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-72 h-72 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
 
                 <Image
-                  src={siteConfig.images.suitCutout}
+                  src={siteConfig.images.frontPose}
                   alt="PTM Jaufar Swadiq — Human Excellence Strategist"
                   fill
-                  sizes="(max-width: 768px) 100vw, 450px"
-                  className="object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.75)]"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  className="object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] relative z-10"
                   priority
                 />
               </div>
             </div>
 
             {/* Right: Story, Vision & Social Links (7 cols) */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 pb-14 sm:pb-20 lg:pb-24">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/10 border border-gold/25">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
                 <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
