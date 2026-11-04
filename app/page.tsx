@@ -228,34 +228,43 @@ export default function HomePage() {
             {siteConfig.expertiseList.map((item, idx) => (
               <div
                 key={item.id}
-                className="p-8 rounded-2xl bg-gradient-to-br from-[#10223D]/70 to-[#0A1628]/90 border border-white/10 hover:border-gold/40 transition-colors flex flex-col justify-between backdrop-blur-sm"
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-[#10223D]/70 to-[#0A1628]/90 border border-white/10 hover:border-gold/50 transition-all duration-500 flex flex-col justify-between backdrop-blur-sm hover:-translate-y-2 hover:shadow-[0_22px_50px_rgba(209,167,81,0.18)] overflow-hidden"
               >
+                {/* Animated Top Laser Beam Accent on Hover */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/0 group-hover:via-gold/90 to-transparent transition-all duration-700" />
+
+                {/* Subtle Radial Ambient Gold Glow on Hover */}
+                <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-gold/0 group-hover:bg-gold/15 blur-2xl transition-all duration-700 pointer-events-none" />
+
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-navy-dark border border-gold/25 flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-navy-dark border border-gold/25 group-hover:border-gold group-hover:bg-gold/10 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(209,167,81,0.25)] transition-all duration-300 flex items-center justify-center mb-6">
                     {pillarIcons[idx]}
                   </div>
 
-                  <h3 className="font-heading text-xl font-semibold text-white mb-6">
+                  <h3 className="font-heading text-xl font-semibold text-white mb-6 group-hover:text-gold-light transition-colors">
                     {item.title}
                   </h3>
 
                   <div className="space-y-3">
                     {item.topics.map((topic, i) => (
-                      <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                      <div
+                        key={i}
+                        className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300 group-hover:text-slate-200 transition-colors"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                         <span>{topic}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-8 border-t border-white/10 mt-8">
+                <div className="pt-8 border-t border-white/10 group-hover:border-gold/20 mt-8 transition-colors">
                   <Link
                     href="#contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold hover:text-gold-light"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold hover:text-gold-light group/link transition-colors"
                   >
                     <span>Request Workshop on this Topic</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1.5" />
                   </Link>
                 </div>
               </div>

@@ -101,6 +101,36 @@ body {
   }
 }
 
+/* Card Content Smooth Fade & Scale Transition */
+@keyframes cardFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-fade {
+  animation: cardFadeSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Moving Light Beam Sweep across card top */
+@keyframes cardBeamSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50%, 100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-beam-sweep {
+  animation: cardBeamSweep 4s ease-in-out infinite;
+}
+
 .gold-shimmer-text {
   background: linear-gradient(
     90deg,

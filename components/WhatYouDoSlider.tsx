@@ -56,14 +56,19 @@ export default function WhatYouDoSlider() {
       </div>
 
       {/* Main Slide Card */}
-      <div className="p-6 sm:p-10 lg:p-12 rounded-2xl bg-navy-card-gradient backdrop-blur-md shadow-2xl relative overflow-hidden">
-        {/* Subtle Background Glow */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-[90px] pointer-events-none" />
+      <div className="group/card p-6 sm:p-10 lg:p-12 rounded-2xl bg-navy-card-gradient backdrop-blur-md shadow-2xl relative overflow-hidden border border-white/10 hover:border-gold/45 hover:shadow-[0_25px_65px_rgba(209,167,81,0.16)] transition-all duration-500">
+        {/* Animated Top Gold Beam Accent */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/30 to-transparent overflow-hidden">
+          <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-beam-sweep" />
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Ambient Silk Radial Glow on Card */}
+        <div className="absolute -top-20 -right-20 w-80 h-80 bg-gold/10 group-hover/card:bg-gold/18 rounded-full blur-[90px] pointer-events-none transition-all duration-700" />
+
+        <div key={activeIdx} className="animate-card-fade grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Slide Text Content (7 cols) */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-5 order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/30 shadow-sm">
               <span className="font-mono text-xs font-semibold text-gold">
                 PILLAR 0{activeIdx + 1} OF 0{slides.length}
               </span>
@@ -82,15 +87,15 @@ export default function WhatYouDoSlider() {
               {currentSlide.description}
             </p>
 
-            {/* Key Delivery Points */}
+            {/* Key Delivery Points with Hover Slide */}
             <div className="space-y-2.5 pt-2 w-full">
               {currentSlide.points.map((pt, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-2.5 p-3 rounded-xl bg-navy-dark/70 border border-white/5 text-xs sm:text-sm text-slate-200"
+                  className="flex items-start gap-2.5 p-3 rounded-xl bg-navy-dark/70 hover:bg-navy-dark/95 border border-white/5 hover:border-gold/30 hover:translate-x-1.5 transition-all duration-300 text-xs sm:text-sm text-slate-200 group/pt cursor-default"
                 >
-                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                  <span>{pt}</span>
+                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5 group-hover/pt:scale-110 transition-transform" />
+                  <span className="group-hover/pt:text-white transition-colors">{pt}</span>
                 </div>
               ))}
             </div>
@@ -99,10 +104,10 @@ export default function WhatYouDoSlider() {
             <div className="pt-4 flex flex-wrap items-center justify-between gap-4 w-full border-t border-white/10">
               <Link
                 href="#contact"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold hover:text-gold-light"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold hover:text-gold-light group/cta transition-colors"
               >
                 <span>Inquire About {currentSlide.title}</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/cta:translate-x-1.5" />
               </Link>
 
               {/* Prev / Next Arrows */}
@@ -110,18 +115,18 @@ export default function WhatYouDoSlider() {
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="p-2.5 rounded-full bg-navy-dark border border-white/15 text-slate-300 hover:text-gold hover:border-gold transition-colors focus:outline-none"
+                  className="p-2.5 rounded-full bg-navy-dark border border-white/15 text-slate-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none shadow-sm"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <div className="text-xs font-mono text-slate-400 px-1">
+                <div className="text-xs font-mono text-slate-400 px-1 font-semibold">
                   0{activeIdx + 1} / 0{slides.length}
                 </div>
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="p-2.5 rounded-full bg-navy-dark border border-white/15 text-slate-300 hover:text-gold hover:border-gold transition-colors focus:outline-none"
+                  className="p-2.5 rounded-full bg-navy-dark border border-white/15 text-slate-300 hover:text-navy hover:bg-gold hover:border-gold hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none shadow-sm"
                   aria-label="Next slide"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -130,18 +135,18 @@ export default function WhatYouDoSlider() {
             </div>
           </div>
 
-          {/* Slide Authentic Image (5 cols) */}
+          {/* Slide Authentic Image (5 cols) with Zoom on Hover */}
           <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border border-gold/30 shadow-2xl bg-navy-dark">
+            <div className="group/img relative w-full max-w-md aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border border-gold/30 hover:border-gold/60 shadow-2xl bg-navy-dark transition-all duration-500">
               <Image
                 key={currentSlide.image}
                 src={currentSlide.image}
                 alt={currentSlide.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 420px"
-                className="object-cover transition-opacity duration-500"
+                className="object-cover group-hover/img:scale-108 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-4 right-4 text-xs font-semibold text-white drop-shadow">
                 {currentSlide.title} in Action
               </div>
