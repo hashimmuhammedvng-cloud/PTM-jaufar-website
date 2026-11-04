@@ -9,7 +9,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-[#070F1E] to-[#040810] text-slate-300 border-t border-gold/15 pt-16 pb-12 font-body">
+    <footer className="relative z-10 bg-gradient-to-b from-[#070F1E] via-[#0A1628] to-[#040810] text-slate-300 border-t border-gold/20 pt-16 pb-12 font-body shadow-2xl">
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Brand & Philosophy */}
@@ -25,7 +25,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <span className="font-heading font-bold text-xl text-white tracking-tight block">
+                <span className="font-heading font-semibold text-xl text-white tracking-tight block">
                   {siteConfig.name}
                 </span>
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-gold block">
@@ -93,7 +93,7 @@ export default function Footer() {
 
           {/* Quick Navigation Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs uppercase tracking-wider text-gold font-bold mb-4 font-heading">
+            <h4 className="text-xs uppercase tracking-wider text-gold font-semibold mb-4 font-heading">
               Quick Navigation
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
@@ -122,7 +122,7 @@ export default function Footer() {
 
           {/* Contact / Inquiries */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-xs uppercase tracking-wider text-gold font-bold mb-4 font-heading">
+            <h4 className="text-xs uppercase tracking-wider text-gold font-semibold mb-4 font-heading">
               Connect & Engage
             </h4>
 
