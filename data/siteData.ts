@@ -217,6 +217,9 @@ export const siteConfig = {
     location: "Kerala, India & International",
   },
 
+  // Learning & Course Platform Subdomain (Configurable: e.g. https://learn.hujixglobal.com)
+  coursesUrl: "https://learn.hujixglobal.com",
+
   socialLinks: {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",

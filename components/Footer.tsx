@@ -117,6 +117,11 @@ export default function Footer() {
                   Areas of Expertise
                 </Link>
               </li>
+              <li>
+                <Link href="/courses" className="hover:text-gold transition-colors">
+                  Courses & Programs
+                </Link>
+              </li>
             </ul>
           </div>
 

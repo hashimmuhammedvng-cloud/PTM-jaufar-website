@@ -12,6 +12,7 @@ const navLinks = [
   { label: "What I Do", href: "/#what-i-do" },
   { label: "Expertise", href: "/#expertise" },
   { label: "Who I Help", href: "/#who-i-help" },
+  { label: "Courses", href: "/courses" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -80,14 +81,14 @@ export default function Navbar() {
 
             {/* Desktop Navigation Links — Strictly Single-Line Aligned */}
             <nav
-              className="hidden lg:flex items-center gap-1 xl:gap-2.5 flex-nowrap"
+              className="hidden lg:flex items-center gap-0.5 xl:gap-2 flex-nowrap"
               aria-label="Main Navigation"
             >
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="whitespace-nowrap px-2 xl:px-2.5 py-1.5 text-xs xl:text-sm font-medium text-slate-300 hover:text-gold transition-colors rounded-md hover:bg-white/5"
+                  className="whitespace-nowrap px-1.5 xl:px-2.5 py-1.5 text-xs xl:text-sm font-medium text-slate-300 hover:text-gold transition-colors rounded-md hover:bg-white/5"
                 >
                   {link.label}
                 </Link>
