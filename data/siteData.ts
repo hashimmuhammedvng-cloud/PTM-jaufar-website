@@ -213,6 +213,7 @@ export const siteConfig = {
 
   contact: {
     email: "contact@ptmjaufarswadiq.com",
+    whatsapp: "", // Configurable: Add your final WhatsApp phone number here (e.g. "+919876543210")
     location: "Kerala, India & International",
   },
 

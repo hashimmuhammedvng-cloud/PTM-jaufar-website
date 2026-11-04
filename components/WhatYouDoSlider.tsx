@@ -45,7 +45,7 @@ export default function WhatYouDoSlider() {
             onClick={() => setActiveIdx(idx)}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
               activeIdx === idx
-                ? "btn-white-blue-gradient scale-[1.02] shadow-lg shadow-sky-500/25"
+                ? "btn-gold-gradient text-navy font-bold scale-[1.02] shadow-lg shadow-gold/25"
                 : "bg-navy-light/60 text-slate-300 hover:text-white hover:bg-navy-light border border-white/10"
             }`}
           >
@@ -56,7 +56,7 @@ export default function WhatYouDoSlider() {
       </div>
 
       {/* Main Slide Card */}
-      <div className="p-6 sm:p-10 lg:p-12 rounded-2xl bg-navy-light/40 border border-gold/25 backdrop-blur-md shadow-2xl relative overflow-hidden">
+      <div className="p-6 sm:p-10 lg:p-12 rounded-2xl bg-navy-card-gradient backdrop-blur-md shadow-2xl relative overflow-hidden">
         {/* Subtle Background Glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-[90px] pointer-events-none" />
 

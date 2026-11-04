@@ -36,7 +36,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="pt-24 pb-20 bg-navy text-slate-200 font-body">
+    <div className="pt-24 pb-20 text-slate-200 font-body relative">
       {/* Top Breadcrumb */}
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
         <Link
@@ -51,7 +51,7 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 1: PERSONAL STORY & BIO — CLEAN & MINIMALIST WITH TRANSPARENT CUTOUT
           ========================================================================= */}
-      <section className="py-16 sm:py-24 border-b border-white/5 relative overflow-hidden">
+      <section className="py-16 sm:py-24 border-b border-white/5 relative overflow-hidden bg-gradient-to-b from-[#091528] via-[#0F2342] to-[#070F1E]">
         {/* Subtle Ambient Radial Glow */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -157,7 +157,7 @@ export default function AboutPage() {
           SECTION 2: OUR FOUNDATION (Inspired by Reference Image 4)
           (Vision • Mission • Purpose • Values)
           ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-navy-dark border-b border-white/5 relative">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0C1B33] to-[#060C16] border-b border-white/5 relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-14">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
@@ -229,7 +229,7 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 4: CALL TO ACTION
           ========================================================================= */}
-      <section className="py-20 bg-navy text-center border-t border-white/5">
+      <section className="py-20 bg-gradient-to-b from-[#060C16] via-[#0E203B] to-[#050A14] text-center border-t border-white/5">
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Ready to Unlock Human Excellence?
@@ -241,7 +241,7 @@ export default function AboutPage() {
           <div className="pt-2">
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient shadow-xl"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient shadow-xl"
             >
               <span>Invite Jaufar to Speak or Train</span>
               <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />

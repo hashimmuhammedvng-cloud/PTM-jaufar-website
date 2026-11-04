@@ -29,11 +29,11 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col w-full overflow-hidden bg-navy text-slate-200 font-body">
+    <div className="flex flex-col w-full overflow-hidden text-slate-200 font-body">
       {/* =========================================================================
-          HERO SECTION — BRIGHT VISIBLE STAGE PHOTO & MINIMALIST LEAN CONTENT
+          HERO SECTION — BRIGHT VISIBLE STAGE PHOTO & LUXURY NAVY GRADIENT
           ========================================================================= */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-navy">
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-gradient-to-b from-[#081324] via-[#0E203B] to-[#070F1E]">
         {/* Stage Photo on the Right */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[55%] h-full z-0 pointer-events-none">
           <Image
@@ -45,31 +45,31 @@ export default function HomePage() {
             className="object-cover object-[78%_center] lg:object-right brightness-105 contrast-[1.02]"
           />
           {/* Soft Left Feather */}
-          <div className="absolute inset-y-0 left-0 w-1/3 lg:w-1/2 bg-gradient-to-r from-navy via-navy/60 to-transparent hidden sm:block" />
+          <div className="absolute inset-y-0 left-0 w-1/3 lg:w-1/2 bg-gradient-to-r from-[#081324] via-[#081324]/60 to-transparent hidden sm:block" />
           {/* Light Mobile Contrast Mask */}
-          <div className="absolute inset-0 bg-navy/65 sm:hidden" />
+          <div className="absolute inset-0 bg-[#081324]/65 sm:hidden" />
           {/* Bottom Transition */}
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#070F1E] to-transparent" />
         </div>
 
-        {/* Animated Light White & Royal Blue Ambient Glow */}
-        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-blue-600/20 via-sky-300/15 to-white/10 blur-[130px] pointer-events-none animate-pulse duration-[7000ms]" />
+        {/* Multi-Dimensional Silk Navy & Ambient Gold Glow (Image 2 Inspiration) */}
+        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full bg-gradient-to-tr from-[#163666]/40 via-[#1F4682]/25 to-gold/5 blur-[140px] pointer-events-none" />
 
         {/* Hero Foreground Content */}
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-xl lg:max-w-lg xl:max-w-xl flex flex-col items-start space-y-6">
             {/* Eyebrow Label */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-dark/90 border border-sky-400/35 backdrop-blur-md shadow-lg">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky-200">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-dark/90 border border-gold/30 backdrop-blur-md shadow-lg">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
                 {siteConfig.title}
               </span>
             </div>
 
-            {/* Impactful Headline with Cinematic Reveal & Animated White & Blue Gradient */}
+            {/* Impactful Headline with Cinematic Reveal & Silk Gold Shimmer */}
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase flex flex-col items-start">
               <span className="animate-hero-line-1 inline-block">
-                Unlock <span className="white-blue-shimmer-text">Human Potential.</span>
+                Unlock <span className="gold-shimmer-text">Human Potential.</span>
               </span>
               <span className="animate-hero-line-2 inline-block">
                 Inspire Leadership.
@@ -90,19 +90,19 @@ export default function HomePage() {
                 href="#contact"
                 className="group inline-flex items-center gap-3.5 text-left focus:outline-none"
               >
-                {/* Circular Accent Badge with Arrow (White & Blue Gradient) */}
-                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-navy-dark/90 border border-sky-400/40 flex items-center justify-center p-1 shadow-xl group-hover:border-sky-300 transition-all duration-300 shrink-0">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full btn-white-blue-gradient flex items-center justify-center text-navy-dark group-hover:scale-105 transition-all shadow-md">
+                {/* Circular Accent Badge with Arrow (Silk Gold Gradient) */}
+                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-navy-dark/90 border border-gold/40 flex items-center justify-center p-1 shadow-xl group-hover:border-gold transition-all duration-300 shrink-0">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full btn-gold-gradient flex items-center justify-center text-navy group-hover:scale-105 transition-all shadow-md">
                     <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                   </div>
                 </div>
 
                 {/* Button Text */}
                 <div className="flex flex-col">
-                  <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-sky-300 transition-colors">
+                  <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-wider group-hover:text-gold transition-colors">
                     Invite Jaufar for Your Event
                   </span>
-                  <span className="text-xs text-sky-300/90 font-medium">
+                  <span className="text-xs text-gold/90 font-medium">
                     Keynote Speaking & Training →
                   </span>
                 </div>
@@ -125,8 +125,11 @@ export default function HomePage() {
           ABOUT SECTION — SIMPLE & ELEGANT WITH TRANSPARENT CUTOUT PHOTO
           (Inspired by Riyas Hakkim Reference with Cutout & "Know More" CTA)
           ========================================================================= */}
-      <section id="about" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative overflow-hidden">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0B1A33] to-[#070F1E] border-y border-white/5 relative overflow-hidden">
+        {/* Subtle Silk Glow Accent */}
+        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left Photo: Cutout of Jaufar Waving with Microphone (5 cols) */}
             <div className="lg:col-span-5 flex justify-center items-end">
@@ -170,7 +173,7 @@ export default function HomePage() {
               <div className="pt-3">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient shadow-lg"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient shadow-lg"
                 >
                   <span>Know More</span>
                   <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -184,8 +187,11 @@ export default function HomePage() {
       {/* =========================================================================
           WHAT YOU DO — INTERACTIVE SLIDER WITH 3 IMAGES
           ========================================================================= */}
-      <section id="what-i-do" className="py-20 sm:py-28 bg-navy relative">
-        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="what-i-do" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0F2242] to-[#070F1E] relative overflow-hidden">
+        {/* Subtle Ambient Silk Navy Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-900/20 via-[#15315C]/25 to-blue-900/20 rounded-full blur-[130px] pointer-events-none" />
+
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-10">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
               WHAT I DO
@@ -201,7 +207,7 @@ export default function HomePage() {
       {/* =========================================================================
           TOPICS / EXPERTISE — 3 CORE PILLARS
           ========================================================================= */}
-      <section id="expertise" className="py-20 sm:py-28 bg-navy-dark border-y border-white/5 relative">
+      <section id="expertise" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0A182E] to-[#060D1A] border-y border-white/5 relative">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
@@ -219,10 +225,10 @@ export default function HomePage() {
             {siteConfig.expertiseList.map((item, idx) => (
               <div
                 key={item.id}
-                className="p-8 rounded-2xl bg-navy-light/40 border border-white/10 hover:border-gold/40 transition-colors flex flex-col justify-between"
+                className="p-8 rounded-2xl bg-gradient-to-br from-[#10223D]/70 to-[#0A1628]/90 border border-white/10 hover:border-gold/40 transition-colors flex flex-col justify-between backdrop-blur-sm"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-navy border border-gold/25 flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-navy-dark border border-gold/25 flex items-center justify-center mb-6">
                     {pillarIcons[idx]}
                   </div>
 
@@ -258,9 +264,9 @@ export default function HomePage() {
       {/* =========================================================================
           WHO YOU HELP — INTERACTIVE 3D COVERFLOW SLIDER (MATCHING PHOTO 2)
           ========================================================================= */}
-      <section id="who-i-help" className="py-20 sm:py-28 bg-navy relative overflow-hidden">
-        {/* Subtle Ambient Glow Behind Carousel */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
+      <section id="who-i-help" className="py-20 sm:py-28 bg-gradient-to-b from-[#060D1A] via-[#102547] to-[#070F1F] relative overflow-hidden">
+        {/* Subtle Ambient Silk Navy Glow Behind Carousel */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[380px] bg-gradient-to-r from-[#143260]/30 via-gold/5 to-[#143260]/30 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center relative z-10">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block mb-2">
@@ -279,11 +285,12 @@ export default function HomePage() {
         <WhoYouHelpCoverflow />
       </section>
 
-
       {/* =========================================================================
           CALL TO ACTION, SOCIAL CHANNELS & INQUIRY FORM
           ========================================================================= */}
-      <section id="contact" className="py-20 sm:py-28 bg-navy border-t border-gold/15 relative">
+      <section id="contact" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1F] via-[#0C1B33] to-[#050A14] border-t border-gold/15 relative overflow-hidden">
+        {/* Soft Ambient Depth Glow */}
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/15 rounded-full blur-[140px] pointer-events-none" />
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Info & Social Channels (5 cols) */}

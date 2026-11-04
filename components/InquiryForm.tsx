@@ -110,7 +110,7 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
   };
 
   return (
-    <div className="bg-navy-light/60 border border-gold/25 rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative">
+    <div className="bg-navy-card-gradient rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative">
       <div className="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
       {status === "success" ? (
@@ -257,7 +257,7 @@ export default function InquiryForm({ defaultInquiryType }: { defaultInquiryType
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-white-blue-gradient disabled:opacity-60"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-button text-xs font-bold uppercase tracking-wider btn-gold-gradient disabled:opacity-60"
             >
               {status === "loading" ? (
                 <>
