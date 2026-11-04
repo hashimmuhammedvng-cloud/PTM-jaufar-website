@@ -221,10 +221,10 @@ export const siteConfig = {
   coursesUrl: "https://learn.hujixglobal.com",
 
   socialLinks: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
+    instagram: "https://www.instagram.com/ptmjaufarsadiq?mdxt=dHY4MDJrNmJkaGh4",
+    facebook: "https://www.facebook.com/share/1bQdvcFBfz/",
     linkedin: "https://linkedin.com",
-    youtube: "https://youtube.com",
+    youtube: "https://www.youtube.com/@PTMJaufarSadiq",
   },
 
   // Foundation Pillars (About Page)
