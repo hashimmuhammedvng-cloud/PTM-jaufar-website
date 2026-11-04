@@ -123,30 +123,33 @@ export default function HomePage() {
 
       {/* =========================================================================
           ABOUT SECTION — SIMPLE & ELEGANT WITH TRANSPARENT CUTOUT PHOTO
-          (Inspired by Riyas Hakkim Reference with Cutout & "Know More" CTA)
+          (Anchored to Bottom Line like a Clipping Mask Model)
           ========================================================================= */}
-      <section id="about" className="py-20 sm:py-28 bg-gradient-to-b from-[#070F1E] via-[#0B1A33] to-[#070F1E] border-y border-white/5 relative overflow-hidden">
+      <section id="about" className="pt-20 sm:pt-28 pb-0 bg-gradient-to-b from-[#070F1E] via-[#0B1A33] to-[#070F1E] border-y border-white/5 relative overflow-hidden">
         {/* Subtle Silk Glow Accent */}
-        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-blue-700/20 via-sky-400/10 to-gold/10 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left Photo: Cutout of Jaufar Waving with Microphone (5 cols) */}
-            <div className="lg:col-span-5 flex justify-center items-end">
-              <div className="relative w-full max-w-sm sm:max-w-md h-[420px] sm:h-[480px] flex items-end justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
+            {/* Left Photo: Cutout Anchored to the Bottom Line (5 cols) */}
+            <div className="lg:col-span-5 flex justify-center items-end self-end order-2 lg:order-1 -mb-px">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-[460px] sm:h-[520px] lg:h-[580px] flex items-end justify-center">
+                {/* Soft Warm Radial Glow Behind Cutout */}
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
+
                 <Image
                   src={siteConfig.images.cutout}
                   alt="PTM Jaufar Swadiq — Human Excellence Strategist"
                   fill
-                  sizes="(max-width: 768px) 100vw, 450px"
-                  className="object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.6)]"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  className="object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] relative z-10"
                   priority
                 />
               </div>
             </div>
 
             {/* Right Narrative: Simple About Text + Gold Underline + "Know More" Button (7 cols) */}
-            <div className="lg:col-span-7 flex flex-col items-start space-y-5">
+            <div className="lg:col-span-7 flex flex-col items-start space-y-5 pb-16 sm:pb-24 lg:pb-28 order-1 lg:order-2">
               <div>
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
                   About PTM Jaufar Swadiq
