@@ -60,9 +60,9 @@ function AnimatedMetricItem({
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight drop-shadow-lg flex items-baseline justify-center">
+      <div className="font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight drop-shadow-lg flex items-baseline justify-center">
         <span>{displayValue.toLocaleString()}</span>
-        <span className="text-gold ml-1 font-bold">{item.suffix}</span>
+        <span className="text-gold ml-1 font-semibold">{item.suffix}</span>
       </div>
       <div className="font-heading font-semibold text-base sm:text-lg text-slate-100 mt-2">
         {item.label}

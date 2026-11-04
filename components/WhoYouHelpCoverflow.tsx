@@ -225,7 +225,7 @@ export default function WhoYouHelpCoverflow() {
 
         {/* Counter Indicator: 1 / 5 */}
         <div className="font-heading font-semibold text-sm sm:text-base text-slate-300 tracking-wider flex items-center gap-2 px-2">
-          <span className="text-white font-bold text-lg sm:text-xl">
+          <span className="text-white font-semibold text-lg sm:text-xl">
             {activeIndex + 1}
           </span>
           <span className="text-gold/70 font-light">/</span>

@@ -48,10 +48,10 @@ function SingleCounter({ item, inView }: CounterProps) {
     <div className="flex flex-col items-start py-2">
       {/* Plain Animated Counter */}
       <div className="flex items-baseline gap-1">
-        <span className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+        <span className="font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
           {formattedNumber}
         </span>
-        <span className="text-gold font-heading font-extrabold text-3xl sm:text-4xl">
+        <span className="text-gold font-heading font-semibold text-3xl sm:text-4xl">
           {item.suffix}
         </span>
       </div>

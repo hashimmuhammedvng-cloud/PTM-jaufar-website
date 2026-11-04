@@ -64,7 +64,7 @@ export default function WhatYouDoSlider() {
           {/* Slide Text Content (7 cols) */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-5 order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/30">
-              <span className="font-mono text-xs font-bold text-gold">
+              <span className="font-mono text-xs font-semibold text-gold">
                 PILLAR 0{activeIdx + 1} OF 0{slides.length}
               </span>
             </div>
