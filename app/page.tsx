@@ -133,23 +133,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
             {/* Left Photo: Cutout Anchored to the Bottom Line (5 cols) */}
             <div className="lg:col-span-5 flex justify-center items-end self-end order-2 lg:order-1 -mb-px">
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-[460px] sm:h-[520px] lg:h-[580px] flex items-end justify-center">
+              <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[540px] h-[500px] sm:h-[580px] lg:h-[640px] xl:h-[670px] flex items-end justify-center">
                 {/* Soft Warm Radial Glow Behind Cutout */}
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
 
                 <Image
                   src={siteConfig.images.cutout}
                   alt="PTM Jaufar Swadiq — Human Excellence Strategist"
                   fill
-                  sizes="(max-width: 768px) 100vw, 500px"
-                  className="object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] relative z-10"
+                  sizes="(max-width: 768px) 100vw, 550px"
+                  className="object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] relative z-10 scale-[1.04] sm:scale-[1.08] lg:scale-[1.12] origin-bottom"
                   priority
                 />
               </div>
             </div>
 
             {/* Right Narrative: Simple About Text + Gold Underline + "Know More" Button (7 cols) */}
-            <div className="lg:col-span-7 flex flex-col items-start space-y-5 pb-16 sm:pb-24 lg:pb-28 order-1 lg:order-2">
+            <div className="lg:col-span-7 flex flex-col items-start space-y-5 pb-12 sm:pb-16 lg:pb-20 order-1 lg:order-2">
               <div>
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
                   About PTM Jaufar Swadiq
