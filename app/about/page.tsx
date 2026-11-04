@@ -36,7 +36,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="pt-24 pb-20 text-slate-200 font-body relative">
+    <div className="pt-24 text-slate-200 font-body relative">
       {/* Top Breadcrumb */}
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
         <Link
@@ -231,7 +231,7 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 4: CALL TO ACTION
           ========================================================================= */}
-      <section className="py-20 bg-gradient-to-b from-[#060C16]/80 via-[#0E203B]/65 to-[#050A14]/90 text-center border-t border-white/5 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#060C16]/80 via-[#0E203B]/65 to-[#070F1E] text-center border-t border-white/5 relative overflow-hidden">
         {/* Animated Silk Gold Drift */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-blue-900/30 via-gold/15 to-transparent rounded-full blur-[115px] pointer-events-none animate-silk-gold" />
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 space-y-6">
