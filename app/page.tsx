@@ -67,7 +67,7 @@ export default function HomePage() {
             </div>
 
             {/* Impactful Headline with Cinematic Reveal & Silk Gold Shimmer */}
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12] uppercase flex flex-col items-start">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-white leading-[1.12] uppercase flex flex-col items-start">
               <span className="animate-hero-line-1 inline-block">
                 Unlock <span className="gold-shimmer-text">Human Potential.</span>
               </span>
@@ -151,7 +151,7 @@ export default function HomePage() {
             {/* Right Narrative: Simple About Text + Gold Underline + "Know More" Button (7 cols) */}
             <div className="lg:col-span-7 flex flex-col items-start space-y-5 pb-12 sm:pb-16 lg:pb-20 order-1 lg:order-2">
               <div>
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight">
                   About PTM Jaufar Swadiq
                 </h2>
                 {/* Gold Underline Bar */}

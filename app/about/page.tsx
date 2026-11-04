@@ -84,7 +84,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight">
                   Hi, I'm PTM Jaufar Swadiq
                 </h1>
                 <div className="w-16 h-[3px] bg-gold mt-3.5 rounded-full" />
