@@ -471,7 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "📝 *Requirements / Message:*",
         message,
         "",
-        "🌐 _Sent from ptmjaufarswadiq.com_"
+        "🌐 _Sent from ptmjaufarsadiq.com_"
       ].filter(Boolean).join("\n");
 
       const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(waLines)}`;
