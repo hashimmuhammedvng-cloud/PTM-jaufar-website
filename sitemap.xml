@@ -1,30 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ptmjaufarsadiq.com/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ptmjaufarsadiq.com/assets/images/hero-portrait.jpg</image:loc>
+      <image:title>PTM Jaufar Sadiq — Human Excellence Strategist</image:title>
+      <image:caption>Official portrait of PTM Jaufar Sadiq, Human Excellence Strategist and Leadership Coach.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ptmjaufarsadiq.com/assets/images/jaufar-stage-hero.png</image:loc>
+      <image:title>PTM Jaufar Sadiq on Stage Speaking at Podium</image:title>
+      <image:caption>PTM Jaufar Sadiq delivering a leadership keynote from the stage.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ptmjaufarsadiq.com/assets/images/jaufar-arms-crossed.png</image:loc>
+      <image:title>PTM Jaufar Sadiq — Leadership &amp; Personal Excellence</image:title>
+      <image:caption>PTM Jaufar Sadiq, Human Excellence Strategist and Leadership Coach.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://ptmjaufarsadiq.com/about/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ptmjaufarsadiq.com/assets/images/hero-portrait.jpg</image:loc>
+      <image:title>PTM Jaufar Sadiq Portrait</image:title>
+      <image:caption>Official professional photograph of PTM Jaufar Sadiq.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ptmjaufarsadiq.com/assets/images/jaufar-front-pose-clean.png</image:loc>
+      <image:title>PTM Jaufar Sadiq — Human Excellence Strategist</image:title>
+      <image:caption>PTM Jaufar Sadiq executive biography and training portrait.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ptmjaufarsadiq.com/assets/images/auditorium-packed.png</image:loc>
+      <image:title>PTM Jaufar Sadiq Addressing Packed Auditorium</image:title>
+      <image:caption>PTM Jaufar Sadiq keynote address and human excellence leadership session.</image:caption>
+    </image:image>
   </url>
   <!--
     NOTE: Courses page is temporarily excluded from indexing while courses are in preparation.
     To restore when real courses launch, uncomment the <url> block below:
   <url>
     <loc>https://ptmjaufarsadiq.com/courses/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   -->
   <url>
     <loc>https://ptmjaufarsadiq.com/privacy/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
