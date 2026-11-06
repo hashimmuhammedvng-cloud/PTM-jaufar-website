@@ -12,12 +12,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!--
+    NOTE: Courses page is temporarily excluded from indexing while courses are in preparation.
+    To restore when real courses launch, uncomment the <url> block below:
   <url>
     <loc>https://ptmjaufarsadiq.com/courses/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  -->
   <url>
     <loc>https://ptmjaufarsadiq.com/privacy/</loc>
     <lastmod>2026-11-04</lastmod>
