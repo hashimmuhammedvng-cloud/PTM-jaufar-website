@@ -1,5 +1,5 @@
 /**
- * PTM Jaufar Swadiq — Personal Branding Website
+ * PTM Jaufar Sadiq — Personal Branding Website
  * Vanilla JavaScript Interactive Engine
  * Zero dependencies, pure ES6+ vanilla JS
  */
@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Format WhatsApp Message
       const whatsappNumber = "919544393636";
       const waLines = [
-        "✨ *NEW INQUIRY — PTM Jaufar Swadiq* ✨",
+        "✨ *NEW INQUIRY — PTM Jaufar Sadiq* ✨",
         "",
         `📌 *Reference ID:* ${refCode}`,
         `👤 *Name:* ${fullName}`,

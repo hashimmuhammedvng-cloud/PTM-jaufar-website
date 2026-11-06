@@ -1,6 +1,6 @@
-# PTM Jaufar Swadiq — Official Website (Static HTML5 / CSS3 / Vanilla JS)
+# PTM Jaufar Sadiq — Official Website (Static HTML5 / CSS3 / Vanilla JS)
 
-This repository contains the production-ready static website for **PTM Jaufar Swadiq**, Human Excellence Strategist. It is built strictly using **HTML5, CSS3, and vanilla JavaScript**, completely free of Node.js, React, or server-side build steps.
+This repository contains the production-ready static website for **PTM Jaufar Sadiq**, Human Excellence Strategist. It is built strictly using **HTML5, CSS3, and vanilla JavaScript**, completely free of Node.js, React, or server-side build steps.
 
 It is designed for immediate, zero-configuration deployment to **Hostinger Premium Web Hosting** directly inside `public_html`.
 
@@ -86,7 +86,7 @@ This website is pre-configured for **Hostinger Premium Web Hosting** using GitHu
 
 ### Step 1: Open Hostinger hPanel
 1. Log in to your [Hostinger hPanel](https://hpanel.hostinger.com).
-2. Go to **Websites** → Select your domain (`ptmjaufarswadiq.com`).
+2. Go to **Websites** → Select your domain (`ptmjaufarsadiq.com`).
 3. Under the **Advanced** section in the left sidebar, click **Git**.
 
 ### Step 2: Connect GitHub Repository
